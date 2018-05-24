@@ -1,0 +1,14 @@
+[CNR_BJ]
+Password=8888
+Password_Admin=0000
+Traincode=111
+RunTime1=2017-5-10 10:38:46
+RunTime2=2010-11-4
+TimeSettingState=1
+
+[HMI]
+TC1_HMI=0
+TC2_HMI=1
+
+[LightSet]
+LightValue=154
