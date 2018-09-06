@@ -2044,6 +2044,9 @@ int Faultfilter30s = 0;
 
 int timesetting_num=0;
 
+int OtherTrainHVACmode = 0;
+int OtherTrainHVACmode_old = 0;
+bool OtherTrainsettingHVAC = false;
 CGlobal::CGlobal()
 {
 }

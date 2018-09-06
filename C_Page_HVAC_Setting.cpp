@@ -422,7 +422,6 @@ CHVACSettingPage::CHVACSettingPage()
         m_bAutoTempV = false;   //只有自动制冷，自动制暖模式下 才可以设置温度
         m_bBtnPress=false;     //是否有按钮按下，如果有按钮按下则必须等按钮弹起后才可以点击其它按钮
 
-
         for(int i = 0; i < 6 ; i++)
         {
             m_PCOffSAVEflag[i] = false;
@@ -434,17 +433,8 @@ CHVACSettingPage::CHVACSettingPage()
 
 void CHVACSettingPage::OnUpdatePage()
 {
-/*
-    ((CButton*)GetDlgItem(ID_CHVACSET_LABEL_DEBUG))->SetCtrlText(QString::number(m_bAutoTempV)
-                                                                 +QString::number(m_bBtnPress)
-                                                                 +QString::number(HVAC_command_hide)
-                                                                 +QString::number(HVAC_button_color)
-                                                                 +QString::number(HVAC_mode_se1ect)
-                                                                 +QString::number(m_PressBtnID)
-                                                                 +QString::number(HVAC_valid_timer)
-                                                                 );
-*/
-  updateTrain(ID_CHVACSET_TRAIN);
+
+     updateTrain(ID_CHVACSET_TRAIN);
     updateArrow(ID_CHVACSET_ARROW_LEFT,ID_CHVACSET_ARROW_RIGHT);
 
     //updateErrorLine(ID_CHVACSET_TRAIN);
@@ -485,6 +475,42 @@ void CHVACSettingPage::OnUpdatePage()
         //HMiCT_SetFlagChecker_U8 = 0x55;
     }
     UpdateRealtimefaults();
+    if(HMiCT_Reduce1_B1)
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_TEMPDOWN))->ChangeButtonState(LBUTTON_DOWN);
+    }else
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_TEMPDOWN))->ChangeButtonState(LBUTTON_UP);
+    }
+    if(HMiCT_Reduce2_B1)
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_TEMPDOWN2))->ChangeButtonState(LBUTTON_DOWN);
+    }else
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_TEMPDOWN2))->ChangeButtonState(LBUTTON_UP);
+    }
+    if(HMiCT_Add1_B1)
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_TEMPUP))->ChangeButtonState(LBUTTON_DOWN);
+    }else
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_TEMPUP))->ChangeButtonState(LBUTTON_UP);
+    }
+    if(HMiCT_Add2_B1)
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_TEMPUP2))->ChangeButtonState(LBUTTON_DOWN);
+    }else
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_TEMPUP2))->ChangeButtonState(LBUTTON_UP);
+    }
+    if(HMiCT_UICMode_B1)
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_UIC))->ChangeButtonState(LBUTTON_DOWN);
+    }else
+    {
+        ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_UIC))->ChangeButtonState(LBUTTON_UP);
+    }
+
 }
 
 void CHVACSettingPage::OnInitPage()

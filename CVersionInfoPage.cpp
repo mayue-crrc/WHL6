@@ -44,8 +44,8 @@ ROMDATA g_PicRom_VersionInfo[] =
     {"",                       D_FONT_BOLD(6),      QRect(460, 120,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
     {"",                       D_FONT_BOLD(6),      QRect(640, 120,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
     {"",                       D_FONT_BOLD(6),      QRect(600, 120,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {QObject::trUtf8(""),                      D_FONT_BOLD(4),      QRect(  101,121, 138, 29),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBVIP_LABEL_CCU1            },
-    {QObject::trUtf8(""),                      D_FONT_BOLD(4),      QRect(  281,121, 138, 29),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBVIP_LABEL_CCU2            },
+    {QObject::trUtf8(""),                      D_FONT_BOLD(3),      QRect(  101,121, 138, 29),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBVIP_LABEL_CCU1            },
+    {QObject::trUtf8(""),                      D_FONT_BOLD(3),      QRect(  281,121, 138, 29),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBVIP_LABEL_CCU2            },
     {QObject::trUtf8(""),                      D_FONT_BOLD(4),      QRect( 461,121, 138, 29),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBVIP_LABEL_DCCU1            },
     {QObject::trUtf8(""),                      D_FONT_BOLD(4),      QRect( 641,121, 138, 29),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBVIP_LABEL_DCCU2            },
 
@@ -422,11 +422,13 @@ void CVersionInfoPage::UpdateVersionIofo()
     qreal Version_CCU1_Mvb     = 0;
     qreal Version_CCU1_Sdb     = 0;
     qreal Version_CCU1_Plc     = 0;
+    qreal Version_CCU1_GWMvb     = 0;
 
     qreal Version_CCU2_Vxworks = 0;
     qreal Version_CCU2_Mvb     = 0;
     qreal Version_CCU2_Sdb     = 0;
     qreal Version_CCU2_Plc     = 0;
+    qreal Version_CCU2_GWMvb     = 0;
 
     qreal Version_DCCU1_Vxworks = 0;
     qreal Version_DCCU1_Mvb     = 0;
@@ -517,11 +519,13 @@ void CVersionInfoPage::UpdateVersionIofo()
     Version_CCU1_Mvb    =DivNum(CTHM_CCU1MVBVer_U8,10);
     Version_CCU1_Sdb    =DivNum(CTHM_CCU1SDBVer_U8,10);
     Version_CCU1_Plc    =DivNum(CTHM_CCU1SWVer_U8,10);
+    Version_CCU1_GWMvb   =DivNum(CTHM_CCU1GWMVBVer_U8,10);
 
     Version_CCU2_Vxworks=DivNum(CTHM_CCU2VxWorksVer_U8,10);
     Version_CCU2_Mvb    =DivNum(CTHM_CCU2MVBVer_U8,10);
     Version_CCU2_Sdb    =DivNum(CTHM_CCU2SDBVer_U8,10);
     Version_CCU2_Plc    =DivNum(CTHM_CCU2SWVer_U8,10);
+    Version_CCU2_GWMvb   =DivNum(CTHM_CCU2GWMVBVer_U8,10);
 
 
     Version_DCCU1_Vxworks = DivNum(DT1CT_ERMVxWorksVer_U8,10);
@@ -570,8 +574,10 @@ void CVersionInfoPage::UpdateVersionIofo()
 
 
         QString(CTHM_CCU1SWVer_U8/100);
-    CCU_version ="PLC:"+QString::number(CTHM_CCU1SWVer_U8/100)+"." +QString::number(CTHM_CCU1SWVer_U8%100/10) + "."+ QString::number(CTHM_CCU1SWVer_U8%10)+" "+"MVB:"+QString::number(Version_CCU1_Mvb,'f',1)+"\n"+"SDB:"+QString::number(Version_CCU1_Sdb,'f',1)+" "+"VXW:"+QString::number(Version_CCU1_Vxworks,'f',1);
-    CCU_version2="PLC:"+QString::number(CTHM_CCU2SWVer_U8/100)+"." +QString::number(CTHM_CCU2SWVer_U8%100/10) + "."+ QString::number(CTHM_CCU2SWVer_U8%10)+" "+"MVB:"+QString::number(Version_CCU2_Mvb,'f',1)+"\n"+"SDB:"+QString::number(Version_CCU2_Sdb,'f',1)+" "+"VXW:"+QString::number(Version_CCU2_Vxworks,'f',1);
+    CCU_version ="PLC:"+QString::number(CTHM_CCU1SWVer_U8/100)+"." +QString::number(CTHM_CCU1SWVer_U8%100/10) + "."+ QString::number(CTHM_CCU1SWVer_U8%10)+" "+"MVB:"+QString::number(Version_CCU1_Mvb,'f',1)+"\n"
+                 +"SDB:"+QString::number(Version_CCU1_Sdb,'f',1)+" "+"VXW:"+QString::number(Version_CCU1_Vxworks,'f',1)+" GW:"+QString::number(Version_CCU1_GWMvb,'f',1);
+    CCU_version2="PLC:"+QString::number(CTHM_CCU2SWVer_U8/100)+"." +QString::number(CTHM_CCU2SWVer_U8%100/10) + "."+ QString::number(CTHM_CCU2SWVer_U8%10)+" "+"MVB:"+QString::number(Version_CCU2_Mvb,'f',1)+"\n"
+                 +"SDB:"+QString::number(Version_CCU2_Sdb,'f',1)+" "+"VXW:"+QString::number(Version_CCU2_Vxworks,'f',1)+" GW:"+QString::number(Version_CCU2_GWMvb,'f',1);
 
     DCCU_version ="PLC:"+QString::number(DT1CT_ERMSWVer_U8/100)+"." +QString::number(DT1CT_ERMSWVer_U8%100/10) + "."+ QString::number(DT1CT_ERMSWVer_U8%10)+" "+"MVB:"+QString::number(Version_DCCU1_Mvb,'f',1)+"\n"+"SDB:"+QString::number(Version_DCCU1_Sdb,'f',1)+" "+"VXW:"+QString::number(Version_DCCU1_Vxworks,'f',1);
     DCCU_version2="PLC:"+QString::number(DT2CT_ERMSWVer_U8/100)+"." +QString::number(DT2CT_ERMSWVer_U8%100/10) + "."+ QString::number(DT2CT_ERMSWVer_U8%10)+" "+"MVB:"+QString::number(Version_DCCU2_Mvb,'f',1)+"\n"+"SDB:"+QString::number(Version_DCCU2_Sdb,'f',1)+" "+"VXW:"+QString::number(Version_DCCU2_Vxworks,'f',1);

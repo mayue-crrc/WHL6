@@ -515,6 +515,8 @@
 #define CTHM_AcDeSpeedMoment_I16                (int16_t)highbyteLowbyteExchange(g_dataBuffer_WH_Display[1907])
 #define CTHM_AcDeStopVelocity_U16                 highbyteLowbyteExchange( g_dataBuffer_WH_Display[1909])
 #define CTHM_TransModeLmtSpd_U8                 ( g_dataBuffer_WH_Display[1910]% 256)
+#define CTHM_CCU1GWMVBVer_U8                        g_dataBuffer_Display[1911]%256
+#define CTHM_CCU2GWMVBVer_U8                        g_dataBuffer_Display[1911]/256
 
 
 //  HMI -- HMI
@@ -522,11 +524,21 @@
 #define HM1CT_HMISWVerH_U8                     g_dataBuffer_WH_Display[336+1] % 256
 #define HM1CT_HMISWVerL_U8                     g_dataBuffer_WH_Display[336+1] / 256
 #define HM1CT_SAVETime_B1                     g_dataBuffer_WH_Display[352+5] &bit7
+#define HM1CT_Reduce2_B1                g_dataBuffer_WH_Display[352+8] &bit15
+#define HM1CT_Reduce1_B1                g_dataBuffer_WH_Display[352+8] &bit14
+#define HM1CT_Add1_B1                   g_dataBuffer_WH_Display[352+8] &bit13
+#define HM1CT_Add2_B1                   g_dataBuffer_WH_Display[352+8] &bit12
+#define HM1CT_UICMode_B1                g_dataBuffer_WH_Display[352+8] &bit11
+
 #define HM2CT_LifeSignal_U16                highbyteLowbyteExchange( g_dataBuffer_WH_Display[400])
 #define HM2CT_HMISWVerH_U8                     g_dataBuffer_WH_Display[400+1] % 256
 #define HM2CT_HMISWVerL_U8                     g_dataBuffer_WH_Display[400+1] / 256
 #define HM2CT_SAVETime_B1                     g_dataBuffer_WH_Display[416+5] &bit7
-
+#define HM2CT_Reduce2_B1                g_dataBuffer_WH_Display[416+8] &bit15
+#define HM2CT_Reduce1_B1                g_dataBuffer_WH_Display[416+8] &bit14
+#define HM2CT_Add1_B1                   g_dataBuffer_WH_Display[416+8] &bit13
+#define HM2CT_Add2_B1                   g_dataBuffer_WH_Display[416+8] &bit12
+#define HM2CT_UICMode_B1                g_dataBuffer_WH_Display[416+8] &bit11
 
 //0x610 DCU(Mp1)_CCU_1
 #define TR1CT_GWLfSign_U8                           g_dataBuffer_WH_Display[848] / 256
@@ -3579,6 +3591,7 @@
 
 //#define CTHM_AcDeSpeedMoment_I16                        (int16_t)Change_BigEen(g_dataBuffer_Display[1902])
 //#define CTHM_AcDeShorkRatio_I16                         (int16_t)Change_BigEen(g_dataBuffer_Display[1903])
+
 
 //0x510
 

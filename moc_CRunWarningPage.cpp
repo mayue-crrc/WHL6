@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'CRunWarningPage.h'
 **
-** Created: Thu May 4 14:05:59 2017
+** Created: Thu Sep 6 17:58:58 2018
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -338,8 +338,47 @@ void Dialog::OnUpdateData()
         }
     }
 
+    //other train HVAC mode logic
 
+    if(TC1_HMI == 1 && CTHM_TC2Active_B1)
+    {
+        OtherTrainHVACmode = HM2CT_Add1_B1<<2|
+                             HM2CT_Add2_B1<<1|
+                             HM2CT_Reduce1_B1<<3|
+                             HM2CT_Reduce2_B1<<4|
+                             HM2CT_UICMode_B1;
 
+        if(OtherTrainHVACmode != OtherTrainHVACmode_old)
+        {
+            OtherTrainsettingHVAC = true;
+            HMiCT_Add1_B1 = HM2CT_Add1_B1;
+            HMiCT_Add2_B1 = HM2CT_Add2_B1;
+            HMiCT_Reduce1_B1 = HM2CT_Reduce1_B1;
+            HMiCT_Reduce2_B1 = HM2CT_Reduce2_B1;
+            HMiCT_UICMode_B1 = HM2CT_UICMode_B1;
+        }
+        OtherTrainHVACmode_old = OtherTrainHVACmode;
+    }
+
+    if(TC2_HMI == 1 && CTHM_TC1Active_B1)
+    {
+        OtherTrainHVACmode = HM1CT_Add1_B1<<2|
+                             HM1CT_Add2_B1<<1|
+                             HM1CT_Reduce1_B1<<3|
+                             HM1CT_Reduce2_B1<<4|
+                             HM1CT_UICMode_B1;
+
+        if(OtherTrainHVACmode != OtherTrainHVACmode_old)
+        {
+            OtherTrainsettingHVAC = true;
+            HMiCT_Add1_B1 = HM1CT_Add1_B1;
+            HMiCT_Add2_B1 = HM1CT_Add2_B1;
+            HMiCT_Reduce1_B1 = HM1CT_Reduce1_B1;
+            HMiCT_Reduce2_B1 = HM1CT_Reduce2_B1;
+            HMiCT_UICMode_B1 = HM1CT_UICMode_B1;
+        }
+        OtherTrainHVACmode_old = OtherTrainHVACmode;
+    }
     //刷新页面内容
     pPage->ConnectEvent(WM_UPDATEPAGE);
 
@@ -8494,7 +8533,7 @@ void Dialog::createSendData()
         HMI_HMCT_LifeSignal_U16 = 0;
     }
     HMiCT_HMISWVerH_U8 = 2;
-    HMiCT_HMISWVerL_U8 = 13;
+    HMiCT_HMISWVerL_U8 = 15;
     HMCT_LineNum_U8 = 6;
     ///PORT310
     sendData[0] = HMI_HMCT_LifeSignal_U16/256;
@@ -8556,11 +8595,15 @@ void Dialog::createSendData()
                     HMiCT_HVAC6Venti_B1<<4|
                     HMiCT_HVAC6Auto_B1<<3|
                     HMiCT_HVAC6Test_B1<<2;
-    sendData[49] = HMiCT_Reduce2_B1<<7|
+
+
+    sendData[49] =HMiCT_Reduce2_B1<<7|
                    HMiCT_Reduce1_B1<<6|
                    HMiCT_Add1_B1<<5|
                    HMiCT_Add2_B1<<4|
                    HMiCT_UICMode_B1<<3;
+
+
 
     sendData[51] = HMiCT_SetTemp1_U8;
     sendData[52] = HMiCT_SetTemp2_U8;

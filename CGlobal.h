@@ -2511,4 +2511,10 @@ extern bool overspeed5km;
 
 extern int Faultfilter30s;
 
+//HVAC MODE
+
+extern int OtherTrainHVACmode;
+extern int OtherTrainHVACmode_old;
+extern bool OtherTrainsettingHVAC;
+
 #endif // CGLOBAL_H
