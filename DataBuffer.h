@@ -529,6 +529,12 @@
 #define HM1CT_Add1_B1                   g_dataBuffer_WH_Display[352+8] &bit13
 #define HM1CT_Add2_B1                   g_dataBuffer_WH_Display[352+8] &bit12
 #define HM1CT_UICMode_B1                g_dataBuffer_WH_Display[352+8] &bit11
+#define HM1CT_FIRE_B1       (g_dataBuffer_WH_Display[352+5] &bit15)||(g_dataBuffer_WH_Display[352+6] &bit7)||(g_dataBuffer_WH_Display[352+6] &bit15)||(g_dataBuffer_WH_Display[352+7] &bit7)||(g_dataBuffer_WH_Display[352+7] &bit15)||(g_dataBuffer_WH_Display[352+8] &bit7)
+#define HM1CT_PREOFF_B1     (g_dataBuffer_WH_Display[352+5] &bit14)||(g_dataBuffer_WH_Display[352+6] &bit6)||(g_dataBuffer_WH_Display[352+6] &bit14)||(g_dataBuffer_WH_Display[352+7] &bit6)||(g_dataBuffer_WH_Display[352+7] &bit14)||(g_dataBuffer_WH_Display[352+8] &bit6)
+#define HM1CT_EMVEN_B1      (g_dataBuffer_WH_Display[352+5] &bit13)||(g_dataBuffer_WH_Display[352+6] &bit5)||(g_dataBuffer_WH_Display[352+6] &bit13)||(g_dataBuffer_WH_Display[352+7] &bit5)||(g_dataBuffer_WH_Display[352+7] &bit13)||(g_dataBuffer_WH_Display[352+8] &bit5)
+#define HM1CT_VEN_B1        (g_dataBuffer_WH_Display[352+5] &bit12)||(g_dataBuffer_WH_Display[352+6] &bit4)||(g_dataBuffer_WH_Display[352+6] &bit12)||(g_dataBuffer_WH_Display[352+7] &bit4)||(g_dataBuffer_WH_Display[352+7] &bit12)||(g_dataBuffer_WH_Display[352+8] &bit4)
+#define HM1CT_AUTO_B1       (g_dataBuffer_WH_Display[352+5] &bit11)||(g_dataBuffer_WH_Display[352+6] &bit3)||(g_dataBuffer_WH_Display[352+6] &bit11)||(g_dataBuffer_WH_Display[352+7] &bit3)||(g_dataBuffer_WH_Display[352+7] &bit11)||(g_dataBuffer_WH_Display[352+8] &bit3)
+#define HM1CT_TEST_B1       (g_dataBuffer_WH_Display[352+5] &bit10)||(g_dataBuffer_WH_Display[352+6] &bit2)||(g_dataBuffer_WH_Display[352+6] &bit10)||(g_dataBuffer_WH_Display[352+7] &bit2)||(g_dataBuffer_WH_Display[352+7] &bit10)||(g_dataBuffer_WH_Display[352+8] &bit2)
 
 #define HM2CT_LifeSignal_U16                highbyteLowbyteExchange( g_dataBuffer_WH_Display[400])
 #define HM2CT_HMISWVerH_U8                     g_dataBuffer_WH_Display[400+1] % 256
@@ -539,6 +545,12 @@
 #define HM2CT_Add1_B1                   g_dataBuffer_WH_Display[416+8] &bit13
 #define HM2CT_Add2_B1                   g_dataBuffer_WH_Display[416+8] &bit12
 #define HM2CT_UICMode_B1                g_dataBuffer_WH_Display[416+8] &bit11
+#define HM2CT_FIRE_B1       (g_dataBuffer_WH_Display[416+5] &bit15)||(g_dataBuffer_WH_Display[416+6] &bit7)||(g_dataBuffer_WH_Display[416+6] &bit15)||(g_dataBuffer_WH_Display[416+7] &bit7)||(g_dataBuffer_WH_Display[416+7] &bit15)||(g_dataBuffer_WH_Display[416+8] &bit7)
+#define HM2CT_PREOFF_B1     (g_dataBuffer_WH_Display[416+5] &bit14)||(g_dataBuffer_WH_Display[416+6] &bit6)||(g_dataBuffer_WH_Display[416+6] &bit14)||(g_dataBuffer_WH_Display[416+7] &bit6)||(g_dataBuffer_WH_Display[416+7] &bit14)||(g_dataBuffer_WH_Display[416+8] &bit6)
+#define HM2CT_EMVEN_B1      (g_dataBuffer_WH_Display[416+5] &bit13)||(g_dataBuffer_WH_Display[416+6] &bit5)||(g_dataBuffer_WH_Display[416+6] &bit13)||(g_dataBuffer_WH_Display[416+7] &bit5)||(g_dataBuffer_WH_Display[416+7] &bit13)||(g_dataBuffer_WH_Display[416+8] &bit5)
+#define HM2CT_VEN_B1        (g_dataBuffer_WH_Display[416+5] &bit12)||(g_dataBuffer_WH_Display[416+6] &bit4)||(g_dataBuffer_WH_Display[416+6] &bit12)||(g_dataBuffer_WH_Display[416+7] &bit4)||(g_dataBuffer_WH_Display[416+7] &bit12)||(g_dataBuffer_WH_Display[416+8] &bit4)
+#define HM2CT_AUTO_B1       (g_dataBuffer_WH_Display[416+5] &bit11)||(g_dataBuffer_WH_Display[416+6] &bit3)||(g_dataBuffer_WH_Display[416+6] &bit11)||(g_dataBuffer_WH_Display[416+7] &bit3)||(g_dataBuffer_WH_Display[416+7] &bit11)||(g_dataBuffer_WH_Display[416+8] &bit3)
+#define HM2CT_TEST_B1       (g_dataBuffer_WH_Display[416+5] &bit10)||(g_dataBuffer_WH_Display[416+6] &bit2)||(g_dataBuffer_WH_Display[416+6] &bit10)||(g_dataBuffer_WH_Display[416+7] &bit2)||(g_dataBuffer_WH_Display[416+7] &bit10)||(g_dataBuffer_WH_Display[416+8] &bit2)
 
 //0x610 DCU(Mp1)_CCU_1
 #define TR1CT_GWLfSign_U8                           g_dataBuffer_WH_Display[848] / 256

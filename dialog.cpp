@@ -342,11 +342,18 @@ void Dialog::OnUpdateData()
 
     if(TC1_HMI == 1 && CTHM_TC2Active_B1)
     {
-        OtherTrainHVACmode = HM2CT_Add1_B1<<2|
-                             HM2CT_Add2_B1<<1|
-                             HM2CT_Reduce1_B1<<3|
-                             HM2CT_Reduce2_B1<<4|
-                             HM2CT_UICMode_B1;
+        OtherTrainHVACmode = (bool(HM2CT_Add1_B1))<<2|
+                             (bool(HM2CT_Add2_B1))<<1|
+                             (bool(HM2CT_Reduce1_B1))<<3|
+                             (bool(HM2CT_Reduce2_B1))<<4|
+                             (bool(HM2CT_UICMode_B1))|
+                             (bool(HM2CT_FIRE_B1))<<5|
+                             (bool(HM2CT_PREOFF_B1))<<6|
+                             (bool(HM2CT_EMVEN_B1))<<7|
+                             (bool(HM2CT_VEN_B1))<<8|
+                             (bool(HM2CT_AUTO_B1))<<9|
+                             (bool(HM2CT_TEST_B1))<<10
+                             ;
 
         if(OtherTrainHVACmode != OtherTrainHVACmode_old)
         {
@@ -356,17 +363,35 @@ void Dialog::OnUpdateData()
             HMiCT_Reduce1_B1 = HM2CT_Reduce1_B1;
             HMiCT_Reduce2_B1 = HM2CT_Reduce2_B1;
             HMiCT_UICMode_B1 = HM2CT_UICMode_B1;
+            HMiCT_HVAC1FireMode_B1 = HMiCT_HVAC2FireMode_B1 = HMiCT_HVAC3FireMode_B1 =
+            HMiCT_HVAC4FireMode_B1 = HMiCT_HVAC5FireMode_B1 = HMiCT_HVAC6FireMode_B1 = HM2CT_FIRE_B1;
+            HMiCT_HVAC1PreOff_B1 = HMiCT_HVAC2PreOff_B1 = HMiCT_HVAC3PreOff_B1 =
+            HMiCT_HVAC4PreOff_B1 = HMiCT_HVAC5PreOff_B1 = HMiCT_HVAC6PreOff_B1 = HM2CT_PREOFF_B1;
+            HMiCT_HVAC1EmgcyVenti_B1 = HMiCT_HVAC2EmgcyVenti_B1 = HMiCT_HVAC3EmgcyVenti_B1 =
+            HMiCT_HVAC4EmgcyVenti_B1 = HMiCT_HVAC5EmgcyVenti_B1 = HMiCT_HVAC6EmgcyVenti_B1 = HM2CT_EMVEN_B1;
+            HMiCT_HVAC1Venti_B1 = HMiCT_HVAC2Venti_B1 = HMiCT_HVAC3Venti_B1 =
+            HMiCT_HVAC4Venti_B1 = HMiCT_HVAC5Venti_B1 = HMiCT_HVAC6Venti_B1 = HM2CT_VEN_B1;
+            HMiCT_HVAC1Auto_B1 = HMiCT_HVAC2Auto_B1 = HMiCT_HVAC3Auto_B1 =
+            HMiCT_HVAC4Auto_B1 = HMiCT_HVAC5Auto_B1 = HMiCT_HVAC6Auto_B1 = HM2CT_AUTO_B1;
+            HMiCT_HVAC1Test_B1 = HMiCT_HVAC2Test_B1 = HMiCT_HVAC3Test_B1 =
+            HMiCT_HVAC4Test_B1 = HMiCT_HVAC5Test_B1 = HMiCT_HVAC6Test_B1 = HM2CT_TEST_B1;
         }
         OtherTrainHVACmode_old = OtherTrainHVACmode;
     }
 
     if(TC2_HMI == 1 && CTHM_TC1Active_B1)
     {
-        OtherTrainHVACmode = HM1CT_Add1_B1<<2|
-                             HM1CT_Add2_B1<<1|
-                             HM1CT_Reduce1_B1<<3|
-                             HM1CT_Reduce2_B1<<4|
-                             HM1CT_UICMode_B1;
+        OtherTrainHVACmode = (bool(HM1CT_Add1_B1))<<2|
+                             (bool(HM1CT_Add2_B1))<<1|
+                             (bool(HM1CT_Reduce1_B1))<<3|
+                             (bool(HM1CT_Reduce2_B1))<<4|
+                             (bool(HM1CT_UICMode_B1))|
+                             (bool(HM1CT_FIRE_B1))<<5|
+                             (bool(HM1CT_PREOFF_B1))<<6|
+                             (bool(HM1CT_EMVEN_B1))<<7|
+                             (bool(HM1CT_VEN_B1))<<8|
+                             (bool(HM1CT_AUTO_B1))<<9|
+                             (bool(HM1CT_TEST_B1))<<10;
 
         if(OtherTrainHVACmode != OtherTrainHVACmode_old)
         {
@@ -376,6 +401,18 @@ void Dialog::OnUpdateData()
             HMiCT_Reduce1_B1 = HM1CT_Reduce1_B1;
             HMiCT_Reduce2_B1 = HM1CT_Reduce2_B1;
             HMiCT_UICMode_B1 = HM1CT_UICMode_B1;
+            HMiCT_HVAC1FireMode_B1 = HMiCT_HVAC2FireMode_B1 = HMiCT_HVAC3FireMode_B1 =
+            HMiCT_HVAC4FireMode_B1 = HMiCT_HVAC5FireMode_B1 = HMiCT_HVAC6FireMode_B1 = HM1CT_FIRE_B1;
+            HMiCT_HVAC1PreOff_B1 = HMiCT_HVAC2PreOff_B1 = HMiCT_HVAC3PreOff_B1 =
+            HMiCT_HVAC4PreOff_B1 = HMiCT_HVAC5PreOff_B1 = HMiCT_HVAC6PreOff_B1 = HM1CT_PREOFF_B1;
+            HMiCT_HVAC1EmgcyVenti_B1 = HMiCT_HVAC2EmgcyVenti_B1 = HMiCT_HVAC3EmgcyVenti_B1 =
+            HMiCT_HVAC4EmgcyVenti_B1 = HMiCT_HVAC5EmgcyVenti_B1 = HMiCT_HVAC6EmgcyVenti_B1 = HM1CT_EMVEN_B1;
+            HMiCT_HVAC1Venti_B1 = HMiCT_HVAC2Venti_B1 = HMiCT_HVAC3Venti_B1 =
+            HMiCT_HVAC4Venti_B1 = HMiCT_HVAC5Venti_B1 = HMiCT_HVAC6Venti_B1 = HM1CT_VEN_B1;
+            HMiCT_HVAC1Auto_B1 = HMiCT_HVAC2Auto_B1 = HMiCT_HVAC3Auto_B1 =
+            HMiCT_HVAC4Auto_B1 = HMiCT_HVAC5Auto_B1 = HMiCT_HVAC6Auto_B1 = HM1CT_AUTO_B1;
+            HMiCT_HVAC1Test_B1 = HMiCT_HVAC2Test_B1 = HMiCT_HVAC3Test_B1 =
+            HMiCT_HVAC4Test_B1 = HMiCT_HVAC5Test_B1 = HMiCT_HVAC6Test_B1 = HM1CT_TEST_B1;
         }
         OtherTrainHVACmode_old = OtherTrainHVACmode;
     }
@@ -8533,7 +8570,7 @@ void Dialog::createSendData()
         HMI_HMCT_LifeSignal_U16 = 0;
     }
     HMiCT_HMISWVerH_U8 = 2;
-    HMiCT_HMISWVerL_U8 = 15;
+    HMiCT_HMISWVerL_U8 = 16;
     HMCT_LineNum_U8 = 6;
     ///PORT310
     sendData[0] = HMI_HMCT_LifeSignal_U16/256;

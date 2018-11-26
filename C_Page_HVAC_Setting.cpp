@@ -511,6 +511,59 @@ void CHVACSettingPage::OnUpdatePage()
         ((CButton *)GetDlgItem(ID_CHVACSET_BUTTON_UIC))->ChangeButtonState(LBUTTON_UP);
     }
 
+    if(HMiCT_HVAC1EmgcyVenti_B1||HMiCT_HVAC2EmgcyVenti_B1||HMiCT_HVAC3EmgcyVenti_B1||
+        HMiCT_HVAC4EmgcyVenti_B1||HMiCT_HVAC5EmgcyVenti_B1||HMiCT_HVAC6EmgcyVenti_B1)
+    {
+        SetCtrlButtonState(ID_CHVACSET_BUTTON_AMERGEWIND);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_AMERGEWIND))->SetCtrlEnable(true);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_AMERGEWIND))->ChangeButtonState(LBUTTON_DOWN);
+    }else if(HMiCT_HVAC1Auto_B1||HMiCT_HVAC2Auto_B1||HMiCT_HVAC3Auto_B1||
+        HMiCT_HVAC4Auto_B1||HMiCT_HVAC5Auto_B1||HMiCT_HVAC6Auto_B1)
+    {
+        SetCtrlButtonState(ID_CHVACSET_BUTTON_AUTO);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_AUTO))->SetCtrlEnable(true);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_AUTO))->ChangeButtonState(LBUTTON_DOWN);
+    }
+    else if(HMiCT_HVAC1Test_B1||HMiCT_HVAC2Test_B1||HMiCT_HVAC3Test_B1||
+            HMiCT_HVAC4Test_B1||HMiCT_HVAC5Auto_B1||HMiCT_HVAC6Test_B1)
+    {
+        SetCtrlButtonState(ID_CHVACSET_BUTTON_Test);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_Test))->SetCtrlEnable(true);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_Test))->ChangeButtonState(LBUTTON_DOWN);
+    }
+    else if(HMiCT_HVAC1Venti_B1||HMiCT_HVAC2Venti_B1||HMiCT_HVAC3Venti_B1||
+            HMiCT_HVAC4Venti_B1||HMiCT_HVAC5Venti_B1||HMiCT_HVAC6Venti_B1)
+    {
+        SetCtrlButtonState(ID_CHVACSET_BUTTON_WIND);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_WIND))->SetCtrlEnable(true);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_WIND))->ChangeButtonState(LBUTTON_DOWN);
+    }else
+    {
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_WIND))->SetCtrlEnable(true);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_AUTO))->SetCtrlEnable(true);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_Test))->SetCtrlEnable(true);
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_AMERGEWIND))->SetCtrlEnable(true);
+        //((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_AUTO))->ChangeButtonState(LBUTTON_UP);
+    }
+
+    if(HMiCT_HVAC1FireMode_B1||HMiCT_HVAC2FireMode_B1||HMiCT_HVAC3FireMode_B1||
+            HMiCT_HVAC4FireMode_B1||HMiCT_HVAC5FireMode_B1||HMiCT_HVAC6FireMode_B1)
+    {
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_FireMC))->ChangeButtonState(LBUTTON_DOWN);
+    }
+    else
+    {
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_FireMC))->ChangeButtonState(LBUTTON_UP);
+
+    }
+    if(HMiCT_HVAC1PreOff_B1||HMiCT_HVAC2PreOff_B1||HMiCT_HVAC3PreOff_B1||
+            HMiCT_HVAC4PreOff_B1||HMiCT_HVAC5PreOff_B1||HMiCT_HVAC6PreOff_B1)
+    {
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_PCOff))->ChangeButtonState(LBUTTON_DOWN);
+    }else
+    {
+        ((CButton*)GetDlgItem(ID_CHVACSET_BUTTON_PCOff))->ChangeButtonState(LBUTTON_UP);
+    }
 }
 
 void CHVACSettingPage::OnInitPage()

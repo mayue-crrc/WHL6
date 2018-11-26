@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mvbthread.h'
 **
-** Created: Thu Sep 6 17:58:57 2018
+** Created: Mon Sep 10 11:13:50 2018
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
 **
 ** WARNING! All changes made in this file will be lost!
