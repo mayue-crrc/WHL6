@@ -8570,7 +8570,7 @@ void Dialog::createSendData()
         HMI_HMCT_LifeSignal_U16 = 0;
     }
     HMiCT_HMISWVerH_U8 = 2;
-    HMiCT_HMISWVerL_U8 = 16;
+    HMiCT_HMISWVerL_U8 = 18;
     HMCT_LineNum_U8 = 6;
     ///PORT310
     sendData[0] = HMI_HMCT_LifeSignal_U16/256;

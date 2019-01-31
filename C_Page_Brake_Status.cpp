@@ -386,7 +386,7 @@ void C_Page_Brake_Status::UpdateRealtimefaults()
 //                if(g_faultcount>0)
 //                g_faultcount--;
 //                return;
-                ((CLabel*)GetDlgItem(ID_LABEL_REALTIMEFAULTCATE ))->SetCtrlBKColor(Qt::darkYellow);
+                ((CLabel*)GetDlgItem(ID_LABEL_REALTIMEFAULTCATE ))->SetCtrlBKColor(Qt::white);
                 ((CLabel*)GetDlgItem(ID_LABEL_REALTIMEFAULTCATE ))->SetCtrlText(QObject::trUtf8("故障"));
                 ((CLabel*)GetDlgItem(ID_LABEL_REALTIMEFAULTCATE ))->SetTxtColor(Qt::black);
             }
@@ -539,21 +539,21 @@ void C_Page_Brake_Status::OnBroadCastBtnClk()
 }
 void C_Page_Brake_Status::updatePBState()
 {
-    if(bool(BR1CT_PBStateTc1_B1) == false)
+    if(bool(DICT_TC1DI3ParkBrkRls_B1) == false)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateTc1_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateTc1_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(bool(BR1CT_PBStateMp1_B1) == false)
+    if(bool(DICT_MP1DI1MpParkBrkRls_B1) == false)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateMp1_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateMp1_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(bool(BR1CT_PBStateM1_B1) == false)
+    if(bool(DICT_M1DI1MParkBrkRls_B1) == false)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateM1_B1))->SetCtrlBKColor(Qt::green);
     }else
@@ -561,21 +561,21 @@ void C_Page_Brake_Status::updatePBState()
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateM1_B1))->SetCtrlBKColor(Qt::white);
     }
 
-    if(bool(BR2CT_PBStateTc2_B1) == false)
+    if(bool(DICT_TC2DI3ParkBrkRls_B1) == false)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateTc2_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateTc2_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(bool(BR2CT_PBStateMp2_B1) == false)
+    if(bool(DICT_MP2DI1MpParkBrkRls_B1) == false)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateMp2_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateMp2_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(bool(BR2CT_PBStateM2_B1) == false)
+    if(bool(DICT_M2DI1MParkBrkRls_B1) == false)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_PBStateM2_B1))->SetCtrlBKColor(Qt::green);
     }else
@@ -585,14 +585,14 @@ void C_Page_Brake_Status::updatePBState()
 }
 void C_Page_Brake_Status::updateIsoBog()
 {
-    if(BR1CT_IsolTc1Bog1_B1)
+    if(DICT_TC1DI4TcFBrk1CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedTC1Bog1_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedTC1Bog1_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR1CT_IsolTc1Bog2_B1)
+    if(DICT_TC1DI4TcFBrk2CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedTC1Bog2_B1))->SetCtrlBKColor(Qt::green);
     }else
@@ -600,14 +600,14 @@ void C_Page_Brake_Status::updateIsoBog()
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedTC1Bog2_B1))->SetCtrlBKColor(Qt::white);
     }
 
-    if(BR1CT_IsolMp1Bog1_B1)
+    if(DICT_MP1DI1MPFBrk1CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedMp1Bog1_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedMp1Bog1_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR1CT_IsolMp1Bog2_B1)
+    if(DICT_MP1DI1MPFBrk2CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedMp1Bog2_B1))->SetCtrlBKColor(Qt::green);
     }else
@@ -615,14 +615,14 @@ void C_Page_Brake_Status::updateIsoBog()
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedMp1Bog2_B1))->SetCtrlBKColor(Qt::white);
     }
 
-    if(BR1CT_IsolM1Bog1_B1)
+    if(DICT_M1DI1MFBrk1CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedM1Bog1_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedM1Bog1_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR1CT_IsolM1Bog2_B1)
+    if(DICT_M1DI1MFBrk2CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedM1Bog2_B1))->SetCtrlBKColor(Qt::green);
     }else
@@ -630,14 +630,14 @@ void C_Page_Brake_Status::updateIsoBog()
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedM1Bog2_B1))->SetCtrlBKColor(Qt::white);
     }
 
-    if(BR2CT_IsolTc2Bog1_B1)
+    if(DICT_TC2DI4TcFBrk1CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedTC2Bog1_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedTC2Bog1_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR2CT_IsolTc2Bog2_B1)
+    if(DICT_TC2DI4TcFBrk2CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedTC2Bog2_B1))->SetCtrlBKColor(Qt::green);
     }else
@@ -645,14 +645,14 @@ void C_Page_Brake_Status::updateIsoBog()
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedTC2Bog2_B1))->SetCtrlBKColor(Qt::white);
     }
 
-    if(BR2CT_IsolMp2Bog1_B1)
+    if(DICT_MP2DI1MPFBrk1CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedMp2Bog1_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedMp2Bog1_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR2CT_IsolMp2Bog2_B1)
+    if(DICT_MP2DI1MPFBrk2CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedMp2Bog2_B1))->SetCtrlBKColor(Qt::green);
     }else
@@ -660,14 +660,14 @@ void C_Page_Brake_Status::updateIsoBog()
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedMp2Bog2_B1))->SetCtrlBKColor(Qt::white);
     }
 
-    if(BR2CT_IsolM2Bog1_B1)
+    if(DICT_M2DI1MFBrk1CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedM2Bog1_B1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedM2Bog1_B1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR2CT_IsolM2Bog2_B1)
+    if(DICT_M2DI1MFBrk2CF_B1)
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_BRiCT_BrakeAppliedM2Bog2_B1))->SetCtrlBKColor(Qt::green);
     }else
@@ -694,42 +694,42 @@ void C_Page_Brake_Status::updateHBApp()
 }
 void C_Page_Brake_Status::updateBApp()
 {
-    if(BR1CT_BrakeAppliedTC1Bog1_B1)
+    if(!bool(DICT_TC1DI3AirBrk1Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR1Brake_Applied1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR1Brake_Applied1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR1CT_BrakeAppliedTC1Bog2_B1)
+    if(!bool(DICT_TC1DI3AirBrk2Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR1Brake_Applied2))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR1Brake_Applied2))->SetCtrlBKColor(Qt::white);
     }
-    if(BR1CT_BrakeAppliedMP1Bog1_B1)
+    if(!bool(DICT_MP1DI1MpAirBrk1Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR2Brake_Applied1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR2Brake_Applied1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR1CT_BrakeAppliedMP1Bog2_B1)
+    if(!bool(DICT_MP1DI1MpAirBrk2Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR2Brake_Applied2))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR2Brake_Applied2))->SetCtrlBKColor(Qt::white);
     }
-    if(BR1CT_BrakeAppliedM1Bog1_B1)
+    if(!bool(DICT_M1DI1MAirBrk1Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR3Brake_Applied1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR3Brake_Applied1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR1CT_BrakeAppliedM1Bog2_B1)
+    if(!bool(DICT_M1DI1MAirBrk1Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR3Brake_Applied2))->SetCtrlBKColor(Qt::green);
     }else
@@ -737,42 +737,42 @@ void C_Page_Brake_Status::updateBApp()
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR3Brake_Applied2))->SetCtrlBKColor(Qt::white);
     }
 
-    if(BR2CT_BrakeAppliedM2Bog1_B1)
+    if(!bool(DICT_M2DI1MAirBrk1Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR4Brake_Applied1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR4Brake_Applied1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR2CT_BrakeAppliedM2Bog2_B1)
+    if(!bool(DICT_M2DI1MAirBrk2Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR4Brake_Applied2))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR4Brake_Applied2))->SetCtrlBKColor(Qt::white);
     }
-    if(BR2CT_BrakeAppliedMP2Bog1_B1)
+    if(!bool(DICT_MP2DI1MpAirBrk1Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR5Brake_Applied1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR5Brake_Applied1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR2CT_BrakeAppliedMP2Bog2_B1)
+    if(!bool(DICT_MP2DI1MpAirBrk2Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR5Brake_Applied2))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR5Brake_Applied2))->SetCtrlBKColor(Qt::white);
     }
-    if(BR2CT_BrakeAppliedTC2Bog1_B1)
+    if(!bool(DICT_TC2DI3AirBrk1Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR6Brake_Applied1))->SetCtrlBKColor(Qt::green);
     }else
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR6Brake_Applied1))->SetCtrlBKColor(Qt::white);
     }
-    if(BR2CT_BrakeAppliedTC2Bog2_B1)
+    if(!bool(DICT_TC2DI3AirBrk2Rls_B1))
     {
         ((CLabel *)GetDlgItem(ID_PIBBRAKESTATE_LABEL_CAR6Brake_Applied2))->SetCtrlBKColor(Qt::green);
     }else

@@ -3426,7 +3426,7 @@ int FaultsScanning()
                 ST_REALTIME_FAULT_INFO realtimeFault;
                 realtimeFault.nRomIndex = i;
                 realtimeFault.start_datetime = newinfo.start_datetime;
-                if(pdata->level != 3 )
+                if(pdata->level != 3 || pdata->code == 0x5301 || pdata->code == 0x5302 )
                 {
                     g_realtimeFaultsbarList.push_front(realtimeFault);
                 }

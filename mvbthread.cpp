@@ -680,9 +680,9 @@ void MvbThread::run()
                     // send src data to bus
                     RetVal = pixymvb_PutPort(0x320, (PIXYMVB_Data *) &(srcPortData320[0]));
 
-                    #ifdef LOG_OPEN
-                    qDebug() <<"pixymvb_PutPort(0x320, (PIXYMVB_Data *) &(srcPortData320[0]))"<<RetVal;
-                    #endif
+                    //#ifdef LOG_OPEN
+                    //qDebug() <<"pixymvb_PutPort(0x320, (PIXYMVB_Data *) &(srcPortData320[0]))"<<RetVal;
+                    //#endif
 
                     pixymvb_PutPort(0x321, (PIXYMVB_Data *) &(srcPortData321[0]));
                     pixymvb_PutPort(0x322, (PIXYMVB_Data *) &(srcPortData322[0]));

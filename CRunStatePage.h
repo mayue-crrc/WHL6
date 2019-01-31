@@ -4,6 +4,7 @@
 #include "CPage.h"
 #include "DataBuffer.h"
 #include "CRealTimeFaultsWarnningDialog.h"
+#include "qlabel.h"
 
 #define ID_PIBRUNSTATE_ARROW_RIGHT                         0X0001
 #define ID_PIBRUNSTATE_ARROW_LEFT                          0X0002
@@ -351,8 +352,21 @@
 #define ID_LABEL_ACU_CAR04                           0X093D
 #define ID_LABEL_CTBR_ConditionBrakeMod_B1           0X093E
 #define ID_LABEL_BRiCT_WSP_B1                        0X093F
-#define ID_LABEL_TORBWSP                              0X0940
+#define ID_LABEL_TORBWSP                             0X0940
 #define ID_LABEL_PISMODE_B1                          0X0941
+
+#define ID_LABEL_BCU_CAR01_G                       0X0951
+#define ID_LABEL_BCU_CAR01_S                       0X0952
+#define ID_LABEL_BCU_CAR02_S1                       0X0953
+#define ID_LABEL_BCU_CAR02_S2                       0X0954
+#define ID_LABEL_BCU_CAR03_S                       0X0955
+#define ID_LABEL_BCU_CAR03_G                       0X0956
+#define ID_LABEL_BCU_CAR04_G                       0X0957
+#define ID_LABEL_BCU_CAR04_S                       0X0958
+#define ID_LABEL_BCU_CAR05_S2                       0X0959
+#define ID_LABEL_BCU_CAR05_S1                       0X095A
+#define ID_LABEL_BCU_CAR06_S                       0X095B
+#define ID_LABEL_BCU_CAR06_G                       0X095C
 extern vector<CPage*>  g_PageVec;
 
 class CRunStatePage : public CPage
@@ -457,6 +471,8 @@ private:
     void UpdateLevel();
     void Updatepisbroadcast();
     void UpdateRealtimefaults();
+
+    void setBCUBGStatus(CLabel* lbl,bool b1,bool b2,bool online);
 
 
 //    QString GetCarriageString(char position);

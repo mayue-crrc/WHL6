@@ -2,6 +2,8 @@
 #include "CRealTimeFaultsWarnningDialog.h"
 #include <QtDebug>
 
+#define OFFSET 30
+
 ROMDATA g_PicRom_RunState[] =
 {
 
@@ -65,20 +67,20 @@ ROMDATA g_PicRom_RunState[] =
     {"",                       D_FONT_BOLD(6),      QRect( 10, 240, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
     {"",                       D_FONT_BOLD(6),      QRect( 10, 270, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
     {"",                       D_FONT_BOLD(6),      QRect( 10, 300, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect( 10, 300, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect( 10, 360, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect( 10, 330, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+//    {"",                       D_FONT_BOLD(6),      QRect( 10, 360, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
     {"",                       D_FONT_BOLD(6),      QRect( 10, 390, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
     {"",                       D_FONT_BOLD(6),      QRect( 10, 420, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
- //   {"",                       D_FONT_BOLD(6),      QRect( 10, 450, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect( 10, 450, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
 //    {"",                       D_FONT_BOLD(6),      QRect( 10, 480, 690,   1),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect( 10, 150,   1, 270),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(100, 150,   1, 270),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(200, 150,   1, 270),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(300, 150,   1, 270),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(400, 150,   1, 270),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(500, 150,   1, 270),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(600, 150,   1, 270),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(700-1, 150,   1, 270),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect( 10, 150,   1, 270+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(100, 150,   1, 270+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(200, 150,   1, 270+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(300, 150,   1, 270+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(400, 150,   1, 270+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(500, 150,   1, 270+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(600, 150,   1, 270+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(700-1, 150,   1, 270+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
 //****************牵引制动柱状图_模拟
 //    {"",                       D_FONT_BOLD(6),      QRect(730, 310,   40, 2),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
 //    {"",                       D_FONT_BOLD(6),      QRect(730, 310,   2, 150),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
@@ -137,12 +139,12 @@ ROMDATA g_PicRom_RunState[] =
     {QObject::trUtf8("WHL6ACU_DCOff.PNG"),              D_FONT_BOLD(6),        QRect(660, 243,  30, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_ACU_CAR06_2        },
 
 
-    {"",                       D_FONT_BOLD(6),      QRect(150, 270,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(250, 270,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(350, 270,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(450, 270,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(550, 270,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-    {"",                       D_FONT_BOLD(6),      QRect(650, 270,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(150, 270,   1, 30+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(250, 270,   1, 30+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(350, 270,   1, 30+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(450, 270,   1, 30+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(550, 270,   1, 30+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+    {"",                       D_FONT_BOLD(6),      QRect(650, 270,   1, 30+OFFSET),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
 
 
     {QObject::trUtf8("制动系统状态"),          D_FONT_BOLD(6),      QRect( 11, 271,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
@@ -159,119 +161,133 @@ ROMDATA g_PicRom_RunState[] =
     {QObject::trUtf8("WHL6BCUServBrkRel.PNG"),                 D_FONT_BOLD(8),      QRect(605, 274,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_BCU_CAR04_2        },
     {QObject::trUtf8("WHL6BCUServBrkRel.PNG"),                 D_FONT_BOLD(8),      QRect(655, 274,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_BCU_CAR04_1        },
 
+    {QObject::trUtf8("制动阀状态"),          D_FONT_BOLD(6),      QRect( 11, 271+OFFSET,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
+    {QObject::trUtf8("G1"),                 D_FONT_BOLD(8),      QRect(105, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR01_G        },
+    {QObject::trUtf8("S2"),                 D_FONT_BOLD(8),      QRect(155, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR01_S        },
+    {QObject::trUtf8("S1"),                 D_FONT_BOLD(8),      QRect(205, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR02_S1        },
+    {QObject::trUtf8("S2"),                 D_FONT_BOLD(8),      QRect(255, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR02_S2        },
+    {QObject::trUtf8("S1"),                 D_FONT_BOLD(8),      QRect(305, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR03_S        },
+    {QObject::trUtf8("G2"),                 D_FONT_BOLD(8),      QRect(355, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR03_G        },
+    {QObject::trUtf8("G2"),                 D_FONT_BOLD(8),      QRect(405, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR04_G        },
+    {QObject::trUtf8("S1"),                 D_FONT_BOLD(8),      QRect(455, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR04_S        },
+    {QObject::trUtf8("S2"),                 D_FONT_BOLD(8),      QRect(505, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR05_S2        },
+    {QObject::trUtf8("S1"),                 D_FONT_BOLD(8),      QRect(555, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR05_S1        },
+    {QObject::trUtf8("S2"),                 D_FONT_BOLD(8),      QRect(605, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR06_S        },
+    {QObject::trUtf8("G1"),                 D_FONT_BOLD(8),      QRect(655, 274+OFFSET,  40, 25),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_LABEL_BCU_CAR06_G        },
+
 
 //司2 2 4 6 8 10 9 7 5 3 1 司1
-{QObject::trUtf8("1侧门"),            D_FONT_BOLD(6),      QRect( 11, 301,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
-{QObject::trUtf8(""),              D_FONT_BOLD(2),      QRect(101, 308,  15, 15),           Qt::black,                Qt::white,                CONTROL_IMAGE,               ID_PIBRUNSTATE_LABEL_CAR0DOOR2   },
-{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(117, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,             ID_PIBRUNSTATE_LABEL_CAR1DOOR1       },
-{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(133, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR3        },
-{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(149, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR5        },
-{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(165, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR7        },
-{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(181, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR9        },
+{QObject::trUtf8("1侧门"),            D_FONT_BOLD(6),      QRect( 11, 301+OFFSET,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
+{QObject::trUtf8(""),              D_FONT_BOLD(2),      QRect(101, 308+OFFSET,  15, 15),           Qt::black,                Qt::white,                CONTROL_IMAGE,               ID_PIBRUNSTATE_LABEL_CAR0DOOR2   },
+{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(117, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,             ID_PIBRUNSTATE_LABEL_CAR1DOOR1       },
+{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(133, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR3        },
+{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(149, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR5        },
+{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(165, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR7        },
+{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(181, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR9        },
 
-{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(201, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR1        },
-{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(221, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR3        },
-{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(241, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR5        },
-{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(261, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR7        },
-{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(281, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR9        },
+{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(201, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR1        },
+{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(221, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR3        },
+{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(241, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR5        },
+{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(261, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR7        },
+{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(281, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR9        },
 
-{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(301, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR1        },
-{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(321, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR3        },
-{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(341, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR5        },
-{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(361, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR7        },
-{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(381, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR9        },
+{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(301, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR1        },
+{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(321, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR3        },
+{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(341, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR5        },
+{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(361, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR7        },
+{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(381, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR9        },
 
-{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(401, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR10        },
-{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(421, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR8        },
-{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(441, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR6        },
-{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(461, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR4        },
-{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(481, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR2        },
+{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(401, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR10        },
+{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(421, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR8        },
+{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(441, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR6        },
+{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(461, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR4        },
+{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(481, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR2        },
 
-{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(501, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR10        },
-{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(521, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR8        },
-{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(541, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR6        },
-{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(561, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR4        },
-{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(581, 305,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR2        },
+{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(501, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR10        },
+{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(521, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR8        },
+{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(541, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR6        },
+{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(561, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR4        },
+{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(581, 305+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR2        },
 
 
-{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(601, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR10        },
-{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(617, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR8        },
-{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(633, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR6        },
-{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(649, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR4        },
-{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(665, 305,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR2        },
-{QObject::trUtf8(""),                D_FONT_BOLD(2),      QRect(681, 308,  15, 15),           Qt::black,                Qt::white,                CONTROL_IMAGE,           ID_PIBRUNSTATE_LABEL_CAR9DOOR1        },
+{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(601, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR10        },
+{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(617, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR8        },
+{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(633, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR6        },
+{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(649, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR4        },
+{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(665, 305+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR2        },
+{QObject::trUtf8(""),                D_FONT_BOLD(2),      QRect(681, 308+OFFSET,  15, 15),           Qt::black,                Qt::white,                CONTROL_IMAGE,           ID_PIBRUNSTATE_LABEL_CAR9DOOR1        },
 //司1 1 3 5 7 9 10 8 6 4 2 司2
-{QObject::trUtf8("2侧门"),            D_FONT_BOLD(6),      QRect( 11, 331,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
-{QObject::trUtf8(""),                D_FONT_BOLD(2),      QRect(101, 338,  15, 15),           Qt::black,                Qt::white,                CONTROL_IMAGE,           ID_PIBRUNSTATE_LABEL_CAR0DOOR1        },
-{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(117, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR2        },
-{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(133, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR4        },
-{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(149, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR6        },
-{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(165, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR8        },
-{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(181, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR10        },
+{QObject::trUtf8("2侧门"),            D_FONT_BOLD(6),      QRect( 11, 331+OFFSET,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
+{QObject::trUtf8(""),                D_FONT_BOLD(2),      QRect(101, 338+OFFSET,  15, 15),           Qt::black,                Qt::white,                CONTROL_IMAGE,           ID_PIBRUNSTATE_LABEL_CAR0DOOR1        },
+{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(117, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR2        },
+{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(133, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR4        },
+{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(149, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR6        },
+{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(165, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR8        },
+{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(181, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR1DOOR10        },
 
-{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(201, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR2        },
-{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(221, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR4        },
-{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(241, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR6        },
-{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(261, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR8        },
-{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(281, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR10        },
+{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(201, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR2        },
+{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(221, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR4        },
+{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(241, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR6        },
+{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(261, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR8        },
+{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(281, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR2DOOR10        },
 
-{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(301, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR2        },
-{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(321, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR4        },
-{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(341, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR6        },
-{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(361, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR8        },
-{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(381, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR10        },
+{QObject::trUtf8("2"),                D_FONT_BOLD(4),      QRect(301, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR2        },
+{QObject::trUtf8("4"),                D_FONT_BOLD(4),      QRect(321, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR4        },
+{QObject::trUtf8("6"),                D_FONT_BOLD(4),      QRect(341, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR6        },
+{QObject::trUtf8("8"),                D_FONT_BOLD(4),      QRect(361, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR8        },
+{QObject::trUtf8("10"),                D_FONT_BOLD(4),      QRect(381, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR3DOOR10        },
 
-{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(401, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR9        },
-{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(421, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR7        },
-{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(441, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR5        },
-{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(461, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR3        },
-{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(481, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR1        },
+{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(401, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR9        },
+{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(421, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR7        },
+{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(441, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR5        },
+{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(461, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR3        },
+{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(481, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR4DOOR1        },
 
-{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(501, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR9        },
-{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(521, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR7        },
-{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(541, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR5        },
-{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(561, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR3        },
-{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(581, 335,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR1        },
+{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(501, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR9        },
+{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(521, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR7        },
+{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(541, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR5        },
+{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(561, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR3        },
+{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(581, 335+OFFSET,  19, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR5DOOR1        },
 
-{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(601, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR9        },
-{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(617, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR7       },
-{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(633, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR5        },
-{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(649, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR3        },
-{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(665, 335,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR1        },
-{QObject::trUtf8(""),              D_FONT_BOLD(2),      QRect(681, 338,  15, 15),           Qt::black,                Qt::white,                CONTROL_IMAGE,           ID_PIBRUNSTATE_LABEL_CAR9DOOR2        },
-
-
-{"",                       D_FONT_BOLD(6),      QRect(150, 360,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-{"",                       D_FONT_BOLD(6),      QRect(250, 360,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-{"",                       D_FONT_BOLD(6),      QRect(350, 360,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-{"",                       D_FONT_BOLD(6),      QRect(450, 360,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-{"",                       D_FONT_BOLD(6),      QRect(550, 360,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
-{"",                       D_FONT_BOLD(6),      QRect(650, 360,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+{QObject::trUtf8("9"),               D_FONT_BOLD(4),      QRect(601, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR9        },
+{QObject::trUtf8("7"),                D_FONT_BOLD(4),      QRect(617, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR7       },
+{QObject::trUtf8("5"),                D_FONT_BOLD(4),      QRect(633, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR5        },
+{QObject::trUtf8("3"),                D_FONT_BOLD(4),      QRect(649, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR3        },
+{QObject::trUtf8("1"),                D_FONT_BOLD(4),      QRect(665, 335+OFFSET,  15, 21),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_CAR8DOOR1        },
+{QObject::trUtf8(""),              D_FONT_BOLD(2),      QRect(681, 338+OFFSET,  15, 15),           Qt::black,                Qt::white,                CONTROL_IMAGE,           ID_PIBRUNSTATE_LABEL_CAR9DOOR2        },
 
 
-{QObject::trUtf8("空调系统状态"),        D_FONT_BOLD(6),      QRect( 11, 361,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(105, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR01_1        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(205, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR02_1        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(305, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR03_1        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(405, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR04_2        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(505, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR05_2        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(605, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR06_2        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(155, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR01_2        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(255, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR02_2        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(355, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR03_2        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(455, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR04_1        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(555, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR05_1        },
-    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(655, 363,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR06_1        },
+{"",                       D_FONT_BOLD(6),      QRect(150, 360+OFFSET,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+{"",                       D_FONT_BOLD(6),      QRect(250, 360+OFFSET,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+{"",                       D_FONT_BOLD(6),      QRect(350, 360+OFFSET,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+{"",                       D_FONT_BOLD(6),      QRect(450, 360+OFFSET,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+{"",                       D_FONT_BOLD(6),      QRect(550, 360+OFFSET,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+{"",                       D_FONT_BOLD(6),      QRect(650, 360+OFFSET,   1, 30),           Qt::white,                Qt::black,                CONTROL_LINE,           ID_IGNORE         },
+
+
+{QObject::trUtf8("空调系统状态"),        D_FONT_BOLD(6),      QRect( 11, 361+OFFSET,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(105, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR01_1        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(205, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR02_1        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(305, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR03_1        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(405, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR04_2        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(505, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR05_2        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(605, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR06_2        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(155, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR01_2        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(255, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR02_2        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(355, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR03_2        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(455, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR04_1        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(555, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR05_1        },
+    {QObject::trUtf8("WHL6HVACOff.PNG"),               D_FONT_BOLD(6),      QRect(655, 363+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_HVAC_CAR06_1        },
 
 
 
-{QObject::trUtf8("空压机状态"),           D_FONT_BOLD(6),      QRect( 11, 391,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
-    {QObject::trUtf8("--"),                              D_FONT_BOLD(6),      QRect(103, 392,  94, 27),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_LINE8CAR1        },
-    {QObject::trUtf8("--"),                              D_FONT_BOLD(6),      QRect(203, 392,  94, 27),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_LINE8CAR2        },
-    {QObject::trUtf8("WHL6AirCmp_Off.PNG"),               D_FONT_BOLD(6),      QRect(330, 392,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_AIRCMP_CAR03        },
-    {QObject::trUtf8("WHL6AirCmp_Off.PNG"),               D_FONT_BOLD(6),      QRect(430, 392,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_AIRCMP_CAR04       },
-    {QObject::trUtf8("--"),                               D_FONT_BOLD(6),      QRect(503, 392,  94, 27),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_LINE8CAR5        },
-    {QObject::trUtf8("--"),                                D_FONT_BOLD(6),      QRect(603, 392,  94, 27),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_LINE8CAR6        },
+{QObject::trUtf8("空压机状态"),           D_FONT_BOLD(6),      QRect( 11, 391+OFFSET,  88, 29),           Qt::white,                Qt::transparent,                CONTROL_LABEL,           ID_IGNORE        },
+    {QObject::trUtf8("--"),                              D_FONT_BOLD(6),      QRect(103, 392+OFFSET,  94, 27),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_LINE8CAR1        },
+    {QObject::trUtf8("--"),                              D_FONT_BOLD(6),      QRect(203, 392+OFFSET,  94, 27),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_LINE8CAR2        },
+    {QObject::trUtf8("WHL6AirCmp_Off.PNG"),               D_FONT_BOLD(6),      QRect(330, 392+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_AIRCMP_CAR03        },
+    {QObject::trUtf8("WHL6AirCmp_Off.PNG"),               D_FONT_BOLD(6),      QRect(430, 392+OFFSET,  40, 25),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_LABEL_AIRCMP_CAR04       },
+    {QObject::trUtf8("--"),                               D_FONT_BOLD(6),      QRect(503, 392+OFFSET,  94, 27),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_LINE8CAR5        },
+    {QObject::trUtf8("--"),                                D_FONT_BOLD(6),      QRect(603, 392+OFFSET,  94, 27),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_PIBRUNSTATE_LABEL_LINE8CAR6        },
 
 
 {QObject::trUtf8("ATO模式"),          D_FONT_BOLD(6),      QRect( 710, 120, 80,  33),           Qt::black,                Qt::green,                CONTROL_LABEL,            ID_PIBRUNSTATE_LABEL_ATOMODE  }, \
@@ -279,9 +295,9 @@ ROMDATA g_PicRom_RunState[] =
 {QObject::trUtf8("烟火报警"),          D_FONT_BOLD(6),      QRect(710, 185, 80,  28),           Qt::black,                Qt::red,                CONTROL_LABEL,            ID_LABEL_FIRE         }, \
 {QObject::trUtf8("乘客报警"),          D_FONT_BOLD(6),      QRect(710, 215, 80,  28),           Qt::black,                Qt::red,                CONTROL_LABEL,            ID_LABEL_PASSAGEALARM         },
 {QObject::trUtf8("清洁制动"),          D_FONT_BOLD(6),      QRect(710, 245, 80,  28),           Qt::black,                Qt::green,                CONTROL_LABEL,            ID_LABEL_CTBR_ConditionBrakeMod_B1         },
-{QObject::trUtf8("制动系统\n检测到打滑"),          D_FONT_BOLD(6),      QRect(103, 440, 80,  35),           Qt::black,                Qt::green,                CONTROL_LABEL,            ID_LABEL_BRiCT_WSP_B1        },
-{QObject::trUtf8(""),                    D_FONT_BOLD(6),      QRect(203, 440, 80,  35),           Qt::black,                Qt::green,                CONTROL_LABEL,            ID_LABEL_TORBWSP        },
-{QObject::trUtf8(""),                 D_FONT_BOLD(6),      QRect(303, 440, 100,  35),           Qt::black,                Qt::green,                CONTROL_LABEL,            ID_LABEL_PISMODE_B1         },
+{QObject::trUtf8("制动系统\n检测到打滑"),          D_FONT_BOLD(6),      QRect(103, 460, 80,  35),           Qt::black,                Qt::green,                CONTROL_LABEL,            ID_LABEL_BRiCT_WSP_B1        },
+{QObject::trUtf8(""),                    D_FONT_BOLD(6),      QRect(203, 460, 80,  35),           Qt::black,                Qt::green,                CONTROL_LABEL,            ID_LABEL_TORBWSP        },
+{QObject::trUtf8(""),                 D_FONT_BOLD(6),      QRect(303, 460, 100,  35),           Qt::black,                Qt::green,                CONTROL_LABEL,            ID_LABEL_PISMODE_B1         },
 
 //{QObject::trUtf8("全部确认"),          D_FONT_BOLD(6),      QRect(700, 510, 70,  28),           Qt::black,                Qt::white,                CONTROL_BUTTON,            ID_LABEL_REALTIMEFAULTCONFIRMALL         },
 
@@ -586,7 +602,7 @@ void CRunStatePage::UpdateRealtimefaults()
 //                if(g_faultcount>0)
 //                g_faultcount--;
 //                return;
-                ((CLabel*)GetDlgItem(ID_LABEL_REALTIMEFAULTCATE ))->SetCtrlBKColor(Qt::darkYellow);
+                ((CLabel*)GetDlgItem(ID_LABEL_REALTIMEFAULTCATE ))->SetCtrlBKColor(Qt::white);
                 ((CLabel*)GetDlgItem(ID_LABEL_REALTIMEFAULTCATE ))->SetCtrlText(QObject::trUtf8("故障"));
                 ((CLabel*)GetDlgItem(ID_LABEL_REALTIMEFAULTCATE ))->SetTxtColor(Qt::black);
             }
@@ -1200,6 +1216,34 @@ void CRunStatePage::UpdateACU()
 
 void CRunStatePage::UpdateBCUState()
 {
+
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR01_G),
+                        BR1CT_SeriousFaultTCBog1_B1,BR1CT_SlightFaultTCBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR01_S),
+                        BR1CT_SeriousFaultTCBog2_B1,BR1CT_SlightFaultTCBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR02_S1),
+                        BR1CT_SeriousFaultMpBog1_B1,BR1CT_SlightFaultMpBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR02_S2),
+                        BR1CT_SeriousFaultMpBog2_B1,BR1CT_SlightFaultMpBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR03_S),
+                        BR1CT_SeriousFaultMBog1_B1,BR1CT_SlightFaultMBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR03_G),
+                        BR1CT_SeriousFaultMBog2_B1,BR1CT_SlightFaultMBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR06_G),
+                        BR2CT_SeriousFaultTCBog1_B1,BR2CT_SlightFaultTCBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR06_S),
+                        BR2CT_SeriousFaultTCBog2_B1,BR2CT_SlightFaultTCBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR05_S1),
+                        BR2CT_SeriousFaultMpBog1_B1,BR2CT_SlightFaultMpBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR05_S2),
+                        BR2CT_SeriousFaultMpBog2_B1,BR2CT_SlightFaultMpBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR04_S),
+                        BR2CT_SeriousFaultMBog1_B1,BR2CT_SlightFaultMBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+    setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR04_G),
+                        BR2CT_SeriousFaultMBog2_B1,BR2CT_SlightFaultMBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+
+
     //WHL6BCUFault.PNG
     //WHL6BCUServBrkApp.PNG
     //WHL6BCUSelfTest.PNG
@@ -1221,11 +1265,11 @@ void CRunStatePage::UpdateBCUState()
     }
 
     ////CAR01-1
-    if(bool(BR1CT_PBStateTc1_B1) == false)
+    if(bool(DICT_TC1DI3ParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR01_1))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR1CT_IsolTc1Bog1_B1)
+    }else if(DICT_TC1DI4TcFBrk1CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR01_1))->SetCtrlText("WHL6BCUCutOut.PNG");
         //zhidongqiechu
@@ -1276,7 +1320,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR01_1))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR1CT_BrakeAppliedTC1Bog1_B1) == true)
+    }else if(bool(DICT_TC1DI3AirBrk1Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR01_1))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1300,11 +1344,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543],2,0);
          BitSet(g_dataBuffer_WH_Display[543],3,0);
     }
-    if(bool(BR1CT_PBStateTc1_B1) == false)
+    if(bool(DICT_TC1DI3ParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR01_2))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR1CT_IsolTc1Bog2_B1)
+    }else if(DICT_TC1DI4TcFBrk2CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR01_2))->SetCtrlText("WHL6BCUCutOut.PNG");
         //zhidongqiechu
@@ -1352,7 +1396,7 @@ void CRunStatePage::UpdateBCUState()
     {
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR01_2))->SetCtrlText("WHL6BCUWarn.PNG");
-    }else if(bool(BR1CT_BrakeAppliedTC1Bog2_B1) == true)
+    }else if(bool(DICT_TC1DI3AirBrk2Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR01_2))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1377,11 +1421,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543],5,0);
     }
 
-    if(bool(BR1CT_PBStateMp1_B1) == false)
+    if(bool(DICT_MP1DI1MpParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR02_1))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR1CT_IsolMp1Bog1_B1)
+    }else if(DICT_MP1DI1MPFBrk1CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR02_1))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR1CT_RuningSelfTest_B1)
@@ -1430,7 +1474,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR02_1))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR1CT_BrakeAppliedMP1Bog1_B1) == true)
+    }else if(bool(DICT_MP1DI1MpAirBrk1Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR02_1))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1453,11 +1497,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543],7,0);
     }
 
-    if(bool(BR1CT_PBStateMp1_B1) == false)
+    if(bool(DICT_MP1DI1MpParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR02_2))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR1CT_IsolMp1Bog2_B1)
+    }else if(DICT_MP1DI1MPFBrk2CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR02_2))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR1CT_RuningSelfTest_B1)
@@ -1504,7 +1548,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR02_2))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR1CT_BrakeAppliedMP1Bog2_B1) == true)
+    }else if(bool(DICT_MP1DI1MpAirBrk2Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR02_2))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1527,11 +1571,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543],9,0);
     }
 
-    if(bool(BR1CT_PBStateM1_B1) == false)
+    if(bool(DICT_M1DI1MParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR03_1))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR1CT_IsolM1Bog1_B1)
+    }else if(DICT_M1DI1MFBrk1CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR03_1))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR1CT_RuningSelfTest_B1)
@@ -1585,7 +1629,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR03_1))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR1CT_BrakeAppliedM1Bog1_B1) == true)
+    }else if(bool(DICT_M1DI1MAirBrk1Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR03_1))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1607,11 +1651,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543],11,0);
     }
 
-    if(bool(BR1CT_PBStateM1_B1) == false)
+    if(bool(DICT_M1DI1MParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR03_2))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR1CT_IsolM1Bog2_B1)
+    }else if(DICT_M1DI1MFBrk2CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR03_2))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR1CT_RuningSelfTest_B1)
@@ -1662,7 +1706,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR03_2))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR1CT_BrakeAppliedM1Bog2_B1) == true)
+    }else if(bool(DICT_M1DI1MAirBrk2Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR03_2))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1686,11 +1730,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543+192],0,0);
     }
 
-    if(bool(BR2CT_PBStateTc2_B1) == false)
+    if(bool(DICT_TC2DI3ParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_1))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR2CT_IsolTc2Bog1_B1)
+    }else if(DICT_TC2DI4TcFBrk1CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_1))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR2CT_RuningSelfTest_B1)
@@ -1698,10 +1742,6 @@ void CRunStatePage::UpdateBCUState()
         //zijian
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_1))->SetCtrlText("WHL6BCUSelfTest.PNG");
     }else if(
-
-
-
-
  //           (!Bit(g_dataBuffer_WH_Display[510+192],8))||
  //           (!Bit(g_dataBuffer_WH_Display[510+192],12))||
 //            Bit(g_dataBuffer_WH_Display[526+192],12)||
@@ -1743,7 +1783,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_1))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR2CT_BrakeAppliedTC2Bog1_B1) == true)
+    }else if(bool(DICT_TC2DI3AirBrk1Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_1))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1764,11 +1804,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543+192],3,0);
          BitSet(g_dataBuffer_WH_Display[543+192],2,0);
     }
-    if(bool(BR2CT_PBStateTc2_B1) == false)
+    if(bool(DICT_TC2DI3ParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_2))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR2CT_IsolTc2Bog2_B1)
+    }else if(DICT_TC2DI4TcFBrk2CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_2))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR2CT_RuningSelfTest_B1)
@@ -1817,7 +1857,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_2))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR2CT_BrakeAppliedTC2Bog2_B1) == true)
+    }else if(bool(DICT_TC2DI3AirBrk2Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR04_2))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1838,12 +1878,12 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543+192],5,0);
          BitSet(g_dataBuffer_WH_Display[543+192],4,0);
     }
-    if(bool(BR2CT_PBStateMp2_B1) == false)
+    if(bool(DICT_MP2DI1MpParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR05_1))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
 
-    }else if(BR2CT_IsolMp2Bog1_B1)
+    }else if(DICT_MP2DI1MPFBrk1CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR05_1))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR2CT_RuningSelfTest_B1)
@@ -1895,7 +1935,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR05_1))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR2CT_BrakeAppliedMP2Bog1_B1) == true)
+    }else if(bool(DICT_MP2DI1MpAirBrk1Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR05_1))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1916,11 +1956,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543+192],7,0);
          BitSet(g_dataBuffer_WH_Display[543+192],6,0);
     }
-    if(bool(BR2CT_PBStateMp2_B1) == false)
+    if(bool(DICT_MP2DI1MpParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR05_2))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR2CT_IsolMp2Bog2_B1)
+    }else if(DICT_MP2DI1MPFBrk2CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR05_2))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR2CT_RuningSelfTest_B1)
@@ -1971,7 +2011,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR05_2))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR2CT_BrakeAppliedMP2Bog2_B1) == true)
+    }else if(bool(DICT_MP2DI1MpAirBrk2Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR05_2))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -1992,11 +2032,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543+192],9,0);
          BitSet(g_dataBuffer_WH_Display[543+192],8,0);
     }
-    if(bool(BR2CT_PBStateM2_B1) == false)
+    if(bool(DICT_M2DI1MParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_1))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR2CT_IsolM2Bog1_B1)
+    }else if(DICT_M2DI1MFBrk1CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_1))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR2CT_RuningSelfTest_B1)
@@ -2047,7 +2087,7 @@ void CRunStatePage::UpdateBCUState()
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_1))->SetCtrlText("WHL6BCUWarn.PNG");
 
-    }else if(bool(BR2CT_BrakeAppliedM2Bog1_B1) == true)
+    }else if(bool(DICT_M2DI1MAirBrk1Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_1))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -2068,11 +2108,11 @@ void CRunStatePage::UpdateBCUState()
          BitSet(g_dataBuffer_WH_Display[543+192],11,0);
          BitSet(g_dataBuffer_WH_Display[543+192],10,0);
     }
-    if(bool(BR2CT_PBStateM2_B1) == false)
+    if(bool(DICT_M2DI1MParkBrkRls_B1) == false)
     {
         //tingfangzhiding
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_2))->SetCtrlText("WHL6BCUParkBrkApp.PNG");
-    }else if(BR2CT_IsolM2Bog2_B1)
+    }else if(DICT_M2DI1MFBrk2CF_B1)
     {
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_2))->SetCtrlText("WHL6BCUCutOut.PNG");
     }else if(BR2CT_RuningSelfTest_B1)
@@ -2120,7 +2160,7 @@ void CRunStatePage::UpdateBCUState()
     {
         //jinggao
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_2))->SetCtrlText("WHL6BCUWarn.PNG");
-    }else if(bool(BR2CT_BrakeAppliedM2Bog2_B1) == true)
+    }else if(bool(DICT_M2DI1MAirBrk2Rls_B1) == false)
     {
         //changyongzhidong
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_2))->SetCtrlText("WHL6BCUServBrkApp.PNG");
@@ -2129,7 +2169,28 @@ void CRunStatePage::UpdateBCUState()
         //changyongzhidonghuanjie
         ((CImageCtrl *)GetDlgItem(ID_LABEL_BCU_CAR06_2))->SetCtrlText("WHL6BCUServBrkRel.PNG");
     }
+
 }
+void CRunStatePage::setBCUBGStatus(CLabel* lbl,bool b1,bool b2,bool online)
+{
+    if(!online)
+    {
+        lbl->SetCtrlBKColor(Qt::white);
+    }else if(b1)
+    {
+        lbl->SetCtrlBKColor(Qt::red);
+
+    }else if(b2)
+    {
+        lbl->SetCtrlBKColor(Qt::yellow);
+
+    }else
+    {
+
+        lbl->SetCtrlBKColor(Qt::green);
+    }
+}
+
 void CRunStatePage::UpdateAircmpState()
 {
     //WHL6AirCmp_On.PNG
@@ -3897,7 +3958,7 @@ void CRunStatePage::updateArrFinalStation()
 #ifdef PAGE_BUTTON_BAR_NEW
     void CRunStatePage::OnComBtn1Clk()
     {
-        ChangePage(PAGE_INDEX_RUNSTATE);
+        //ChangePage(PAGE_INDEX_RUNSTATE);
 
     }
 

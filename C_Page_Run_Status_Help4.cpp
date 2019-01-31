@@ -75,7 +75,7 @@ ROMDATA  g_PicRom_CarStatus1Help3[] =
     {QObject::trUtf8("sivdccutout.png"),                       D_FONT_BOLD(8),      QRect( 390, 212, 30,  28),           QColor(0,176,240),                Qt::black,                CONTROL_IMAGE,           ID_IGNORE         },
 
 
-    {QObject::trUtf8("WHL6TCUSelfTest.PNG"),                       D_FONT_BOLD(8),      QRect( 355, 242, 40,  28),           Qt::red,                Qt::black,                CONTROL_IMAGE,           ID_IGNORE         },
+    {QObject::trUtf8("WHL6TCUselftest.PNG"),                       D_FONT_BOLD(8),      QRect( 355, 242, 40,  28),           Qt::red,                Qt::black,                CONTROL_IMAGE,           ID_IGNORE         },
     {QObject::trUtf8("WHL6TCUFault.PNG"),                       D_FONT_BOLD(8),      QRect( 355, 272, 40,  28),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_IGNORE         },
     {QObject::trUtf8("WHL6TCUWarn.PNG"),                       D_FONT_BOLD(8),      QRect( 355, 302, 40,  28),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_IGNORE         },
     {QObject::trUtf8("WHL6TCUAct.PNG"),                       D_FONT_BOLD(8),      QRect( 355, 332, 40,  28),           Qt::white,                Qt::black,                CONTROL_IMAGE,           ID_IGNORE         },

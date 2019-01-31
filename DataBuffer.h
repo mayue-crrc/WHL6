@@ -99,10 +99,52 @@
 #define DICT_TC1DI2Traction_B1                    g_dataBuffer_WH_Display[32+12] & bit11
 #define DICT_TC1DI3DC24_B1                        g_dataBuffer_WH_Display[32+13] & bit5   //add by leo 20161025
 
+//2018/12/27 add new bcu signals
+#define DICT_TC1DI3AirBrk2Rls_B1                      g_dataBuffer_WH_Display[32+13] & bit10
+#define DICT_TC1DI3AirBrk1Rls_B1                      g_dataBuffer_WH_Display[32+13] & bit9
+#define DICT_TC1DI3ParkBrkRls_B1                      g_dataBuffer_WH_Display[32+13] & bit8
+#define DICT_TC1DI4TcFBrkCF_B1                        !(g_dataBuffer_WH_Display[2208+10] & bit13)
+#define DICT_TC1DI4TcFBrk2CF_B1                       !(g_dataBuffer_WH_Display[2208+10] & bit12)
+#define DICT_TC1DI4TcFBrk1CF_B1                       !(g_dataBuffer_WH_Display[2208+10] & bit11)
+
+#define DICT_MP1DI1MpAirBrk2Rls_B1                     g_dataBuffer_WH_Display[64+11] & bit4
+#define DICT_MP1DI1MpAirBrk1Rls_B1                     g_dataBuffer_WH_Display[64+11] & bit3
+#define DICT_MP1DI1MpParkBrkRls_B1                      g_dataBuffer_WH_Display[64+11] & bit2
+#define DICT_MP1DI1MPFBrk2CF_B1                     !(g_dataBuffer_WH_Display[64+11] & bit1)
+#define DICT_MP1DI1MPFBrk1CF_B1                     !(g_dataBuffer_WH_Display[64+11] & bit0)
+#define DICT_MP1DI1FrictionBrakeCutOff_B1           !(g_dataBuffer_WH_Display[64+10] & bit15)
+
+#define DICT_M1DI1MAirBrk2Rls_B1                    g_dataBuffer_WH_Display[96+11] & bit4
+#define DICT_M1DI1MAirBrk1Rls_B1                    g_dataBuffer_WH_Display[96+11] & bit3
+#define DICT_M1DI1MParkBrkRls_B1                    g_dataBuffer_WH_Display[96+11] & bit2
+#define DICT_M1DI1MFBrk2CF_B1                    !(g_dataBuffer_WH_Display[96+11] & bit1)
+#define DICT_M1DI1MFBrk1CF_B1                    !(g_dataBuffer_WH_Display[96+11] & bit0)
+#define DICT_M1DI1MFBrkCF_B1                     !(g_dataBuffer_WH_Display[96+10] & bit13)
+
+#define DICT_M2DI1MAirBrk2Rls_B1                    g_dataBuffer_WH_Display[128+11] & bit4
+#define DICT_M2DI1MAirBrk1Rls_B1                    g_dataBuffer_WH_Display[128+11] & bit3
+#define DICT_M2DI1MParkBrkRls_B1                    g_dataBuffer_WH_Display[128+11] & bit2
+#define DICT_M2DI1MFBrk2CF_B1                    !(g_dataBuffer_WH_Display[128+11] & bit1)
+#define DICT_M2DI1MFBrk1CF_B1                    !(g_dataBuffer_WH_Display[128+11] & bit0)
+#define DICT_M2DI1MFBrkCF_B1                     !(g_dataBuffer_WH_Display[128+10] & bit13)
+
+#define DICT_MP2DI1MpAirBrk2Rls_B1                     g_dataBuffer_WH_Display[160+11] & bit4
+#define DICT_MP2DI1MpAirBrk1Rls_B1                     g_dataBuffer_WH_Display[160+11] & bit3
+#define DICT_MP2DI1MpParkBrkRls_B1                      g_dataBuffer_WH_Display[160+11] & bit2
+#define DICT_MP2DI1MPFBrk2CF_B1                     !(g_dataBuffer_WH_Display[160+11] & bit1)
+#define DICT_MP2DI1MPFBrk1CF_B1                     !(g_dataBuffer_WH_Display[160+11] & bit0)
+#define DICT_MP2DI1FrictionBrakeCutOff_B1           !(g_dataBuffer_WH_Display[160+10] & bit15)
+
+#define DICT_TC2DI3AirBrk2Rls_B1                      g_dataBuffer_WH_Display[192+13] & bit10
+#define DICT_TC2DI3AirBrk1Rls_B1                      g_dataBuffer_WH_Display[192+13] & bit9
+#define DICT_TC2DI3ParkBrkRls_B1                      g_dataBuffer_WH_Display[192+13] & bit8
+#define DICT_TC2DI4TcFBrkCF_B1                        !(g_dataBuffer_WH_Display[2224+10] & bit13)
+#define DICT_TC2DI4TcFBrk2CF_B1                       !(g_dataBuffer_WH_Display[2224+10] & bit12)
+#define DICT_TC2DI4TcFBrk1CF_B1                       !(g_dataBuffer_WH_Display[2224+10] & bit11)
 
 //0x112
-#define RM1CT_DIM4DI13_B1                            g_dataBuffer_WH_Display[2208+10] & bit12
-#define RM1CT_DIM4DI12_B1                            g_dataBuffer_WH_Display[2208+10] & bit11
+
+
 #define DICT_TC1DI4RtDrClose_B1                      g_dataBuffer_WH_Display[2208+10] & bit10
 #define DICT_TC1DI4RtDrOpen_B1                      g_dataBuffer_WH_Display[2208+10] & bit9
 #define DICT_TC1DI4LtDrClose_B1                      g_dataBuffer_WH_Display[2208+10] & bit8
@@ -156,6 +198,7 @@
 
 
 #define DICT_MiDI1ExtPowerSta_B1                  g_dataBuffer_WH_Display[96+11] & bit5
+#define DICT_M1DI1MParkBrkRls_B1                      g_dataBuffer_WH_Display[96+11] & bit2
 
 #define DICT_M1DI1FireFault_B1                      g_dataBuffer_WH_Display[96+10] & bit1    //add by leo 20161025
 #define DICT_M1DI1FireAlarm_B1                      g_dataBuffer_WH_Display[96+10] & bit0
@@ -175,6 +218,7 @@
 #define DICT_M2DI1AirComRun_B1                      g_dataBuffer_WH_Display[128+10] & bit9
 #define DICT_M2DI1AirComUseful_B1                   g_dataBuffer_WH_Display[128+10] & bit10
 #define DICT_M2DI1ExtPowerSta_B1                  g_dataBuffer_WH_Display[128+11] & bit5
+#define DICT_M2DI1MParkBrkRls_B1                      g_dataBuffer_WH_Display[128+11] & bit2
 
 #define DICT_M2DI1FireFault_B1                      g_dataBuffer_WH_Display[128+10] & bit1   //add by leo 20161025
 #define DICT_M2DI1FireAlarm_B1                      g_dataBuffer_WH_Display[128+10] & bit0
@@ -250,8 +294,8 @@
 #define DICT_TC2DI3DC24_B1                         g_dataBuffer_WH_Display[192+13] & bit5   //add by leo 20161025
 
 //0x162
-#define RM6CT_DIM4DI13_B1                            g_dataBuffer_WH_Display[2224+10] & bit12
-#define RM6CT_DIM4DI12_B1                            g_dataBuffer_WH_Display[2224+10] & bit11
+
+
 #define DICT_TC2DI4RtDrClose_B1                      g_dataBuffer_WH_Display[2224+10] & bit10
 #define DICT_TC2DI4RtDrOpen_B1                      g_dataBuffer_WH_Display[2224+10] & bit9
 #define DICT_TC2DI4LtDrClose_B1                      g_dataBuffer_WH_Display[2224+10] & bit8
@@ -1223,6 +1267,32 @@
 #define BR2CT_SelfTestReady_B1                             g_dataBuffer_WH_Display[512+176+14]&bit15
 #define BR2CT_SelfTestFailed_B1                             g_dataBuffer_WH_Display[512+176+15]&bit0
 #define BR2CT_LastSelfTestAborted_B1                           g_dataBuffer_WH_Display[512+176+15]&bit1
+
+#define   BR1CT_SeriousFaultTCBog1_B1                         g_dataBuffer_WH_Display[528+5]&bit8
+#define   BR1CT_SlightFaultTCBog1_B1                         g_dataBuffer_WH_Display[528+5]&bit10
+#define   BR1CT_SeriousFaultTCBog2_B1                         g_dataBuffer_WH_Display[528+5]&bit11
+#define   BR1CT_SlightFaultTCBog2_B1                         g_dataBuffer_WH_Display[528+5]&bit13
+#define   BR1CT_SeriousFaultMpBog1_B1                         g_dataBuffer_WH_Display[528+5]&bit14
+#define   BR1CT_SlightFaultMpBog1_B1                         g_dataBuffer_WH_Display[528+6]&bit0
+#define   BR1CT_SeriousFaultMpBog2_B1                         g_dataBuffer_WH_Display[528+6]&bit1
+#define   BR1CT_SlightFaultMpBog2_B1                         g_dataBuffer_WH_Display[528+6]&bit3
+#define   BR1CT_SeriousFaultMBog1_B1                         g_dataBuffer_WH_Display[528+6]&bit4
+#define   BR1CT_SlightFaultMBog1_B1                         g_dataBuffer_WH_Display[528+6]&bit6
+#define   BR1CT_SeriousFaultMBog2_B1                         g_dataBuffer_WH_Display[528+6]&bit7
+#define   BR1CT_SlightFaultMBog2_B1                         g_dataBuffer_WH_Display[528+6]&bit9
+
+#define   BR2CT_SeriousFaultTCBog1_B1                         g_dataBuffer_WH_Display[528+5+192]&bit8
+#define   BR2CT_SlightFaultTCBog1_B1                         g_dataBuffer_WH_Display[528+5+192]&bit10
+#define   BR2CT_SeriousFaultTCBog2_B1                         g_dataBuffer_WH_Display[528+5+192]&bit11
+#define   BR2CT_SlightFaultTCBog2_B1                         g_dataBuffer_WH_Display[528+5+192]&bit13
+#define   BR2CT_SeriousFaultMpBog1_B1                         g_dataBuffer_WH_Display[528+5+192]&bit14
+#define   BR2CT_SlightFaultMpBog1_B1                         g_dataBuffer_WH_Display[528+6+192]&bit0
+#define   BR2CT_SeriousFaultMpBog2_B1                         g_dataBuffer_WH_Display[528+6+192]&bit1
+#define   BR2CT_SlightFaultMpBog2_B1                         g_dataBuffer_WH_Display[528+6+192]&bit3
+#define   BR2CT_SeriousFaultMBog1_B1                         g_dataBuffer_WH_Display[528+6+192]&bit4
+#define   BR2CT_SlightFaultMBog1_B1                         g_dataBuffer_WH_Display[528+6+192]&bit6
+#define   BR2CT_SeriousFaultMBog2_B1                         g_dataBuffer_WH_Display[528+6+192]&bit7
+#define   BR2CT_SlightFaultMBog2_B1                         g_dataBuffer_WH_Display[528+6+192]&bit9
 
 //508 CCU->TCU
 #define CTBR_Grade_U8                                       g_dataBuffer_WH_Display[1936] %256

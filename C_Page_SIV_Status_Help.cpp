@@ -26,13 +26,14 @@ ROMDATA  g_PicRom_CarStatus1Help2[] =
     {"",                                   D_FONT_BOLD(6),      QRect(50, 450, 730,   1),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
 //    {"",                                   D_FONT_BOLD(6),      QRect(50, 510, 730,   1),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
     {"",                                   D_FONT_BOLD(6),      QRect(50, 480, 730,   1),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
+    {"",                                   D_FONT_BOLD(6),      QRect(50, 540, 730,   1),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
 
 
-    {"",                                   D_FONT_BOLD(6),      QRect( 50,  60,   1, 421),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
-    {"",                                   D_FONT_BOLD(6),      QRect(200,  60,   1, 421),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
-    {"",                                   D_FONT_BOLD(6),      QRect(300,  60,   1, 421),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
-    {"",                                   D_FONT_BOLD(6),      QRect(450,  60,   1, 421),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
-    {"",                                   D_FONT_BOLD(6),      QRect(780,  60,   1, 421),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
+    {"",                                   D_FONT_BOLD(6),      QRect( 50,  60,   1, 421+58),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
+    {"",                                   D_FONT_BOLD(6),      QRect(200,  60,   1, 421+58),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
+    {"",                                   D_FONT_BOLD(6),      QRect(300,  60,   1, 421+58),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
+    {"",                                   D_FONT_BOLD(6),      QRect(450,  60,   1, 421+58),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
+    {"",                                   D_FONT_BOLD(6),      QRect(780,  60,   1, 421+58),           Qt::white,                Qt::black,                CONTROL_LINE,            ID_IGNORE         },
 
     {QObject::trUtf8("显示项目"),                       D_FONT_BOLD(8),      QRect( 52,  61, 145,  28),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_IGNORE         },
     {QObject::trUtf8("显示条件"),                       D_FONT_BOLD(8),      QRect(202,  61,  95,  28),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_IGNORE         },
@@ -75,6 +76,15 @@ ROMDATA  g_PicRom_CarStatus1Help2[] =
     {QObject::trUtf8("慢行模式"),                       D_FONT_BOLD(6),      QRect( 325, 392, 95,  28),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_IGNORE         },
     {QObject::trUtf8("URM模式"),                       D_FONT_BOLD(6),      QRect( 325, 422, 95,  28),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_IGNORE         },
     {QObject::trUtf8("清洁制动"),                       D_FONT_BOLD(6),      QRect( 325, 452, 95,  28),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_IGNORE         },
+
+
+    {QObject::trUtf8("制动阀状态"),                       D_FONT_BOLD(8),      QRect( 52, 482, 145,  56),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_IGNORE         },
+    {QObject::trUtf8("离线 故障"),                       D_FONT_BOLD(5),      QRect( 202, 482, 95,  28),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_IGNORE         },
+    {QObject::trUtf8("警告 正常"),                       D_FONT_BOLD(5),      QRect( 202, 512, 95,  28),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_IGNORE         },
+{QObject::trUtf8("离线"),                       D_FONT_BOLD(6),      QRect( 325, 482, 40,  28),           Qt::black,                Qt::white,                CONTROL_LABEL,           ID_IGNORE         },
+{QObject::trUtf8("故障"),                       D_FONT_BOLD(6),      QRect( 325+52, 482, 40,  28),           Qt::black,                Qt::red,                CONTROL_LABEL,           ID_IGNORE         },
+{QObject::trUtf8("警告"),                       D_FONT_BOLD(6),      QRect( 325, 512, 40,  28),           Qt::black,                Qt::yellow,                CONTROL_LABEL,           ID_IGNORE         },
+{QObject::trUtf8("正常"),                       D_FONT_BOLD(6),      QRect( 325+52, 512, 40,  28),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_IGNORE         },
 
 {QObject::trUtf8("优先级由上到下依次降低"),                       D_FONT_BOLD(6),      QRect( 452, 242, 328,  28),           Qt::white,                Qt::black,                CONTROL_LABEL,           ID_IGNORE         },
 
