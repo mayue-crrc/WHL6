@@ -3426,7 +3426,12 @@ int FaultsScanning()
                 ST_REALTIME_FAULT_INFO realtimeFault;
                 realtimeFault.nRomIndex = i;
                 realtimeFault.start_datetime = newinfo.start_datetime;
-                if(pdata->level != 3 || pdata->code == 0x5301 || pdata->code == 0x5302 )
+                if(pdata->level != 3 || pdata->code == 0x5301 || pdata->code == 0x5302
+                   || pdata->code == 0x5303 || pdata->code == 0x5304
+                   || pdata->code == 0x5305 || pdata->code == 0x5306
+                   || pdata->code == 0x5307 || pdata->code == 0x5308
+                   || pdata->code == 0x5309 || pdata->code == 0x5310
+                   || pdata->code == 0x5311 || pdata->code == 0x5312)
                 {
                     g_realtimeFaultsbarList.push_front(realtimeFault);
                 }
@@ -3462,7 +3467,12 @@ int FaultsScanning()
             }
             if ((1 == pdata->level) || (2 == pdata->level) || (3 == pdata->level))
             {
-                if(pdata->level != 3)
+                if(pdata->level != 3 || pdata->code == 0x5301 || pdata->code == 0x5302
+                   || pdata->code == 0x5303 || pdata->code == 0x5304
+                   || pdata->code == 0x5305 || pdata->code == 0x5306
+                   || pdata->code == 0x5307 || pdata->code == 0x5308
+                   || pdata->code == 0x5309 || pdata->code == 0x5310
+                   || pdata->code == 0x5311 || pdata->code == 0x5312)
                 {
                     realtimefaultscount += 1;
                 }
@@ -3499,7 +3509,12 @@ int FaultsScanning()
                      }
 
 
-               if(pdata->level != 3 )
+               if(pdata->level != 3 || pdata->code == 0x5301 || pdata->code == 0x5302
+                  || pdata->code == 0x5303 || pdata->code == 0x5304
+                  || pdata->code == 0x5305 || pdata->code == 0x5306
+                  || pdata->code == 0x5307 || pdata->code == 0x5308
+                  || pdata->code == 0x5309 || pdata->code == 0x5310
+                  || pdata->code == 0x5311 || pdata->code == 0x5312)
                {
                     for(int j = 0; j < g_realtimeFaultsbarList.size(); j++)
                     {

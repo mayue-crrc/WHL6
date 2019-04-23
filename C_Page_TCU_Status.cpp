@@ -897,17 +897,17 @@ void CCarStatus2Page::OnComBtn7Clk()
 
          //牵引能耗        ID_PIBTCU_1_LABEL_CRA2ELECTBRKF
 
-         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA2ELECTBRKF))->SetCtrlText(QString::number(TR1CT_TrackPowerConsumption_U8)+"/"+QString::number(TR1CT_RHBrkPowerConsumption_U8));
-         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA3ELECTBRKF))->SetCtrlText(QString::number(TR2CT_TrackPowerConsumption_U8)+"/"+QString::number(TR2CT_RHBrkPowerConsumption_U8));
-         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA4ELECTBRKF))->SetCtrlText(QString::number(TR3CT_TrackPowerConsumption_U8)+"/"+QString::number(TR3CT_RHBrkPowerConsumption_U8));
-         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA5ELECTBRKF))->SetCtrlText(QString::number(TR4CT_TrackPowerConsumption_U8)+"/"+QString::number(TR4CT_RHBrkPowerConsumption_U8));
+         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA2ELECTBRKF))->SetCtrlText(QString::number(TR1CT_TrackPowerConsumption_U8));
+         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA3ELECTBRKF))->SetCtrlText(QString::number(TR2CT_TrackPowerConsumption_U8));
+         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA4ELECTBRKF))->SetCtrlText(QString::number(TR3CT_TrackPowerConsumption_U8));
+         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA5ELECTBRKF))->SetCtrlText(QString::number(TR4CT_TrackPowerConsumption_U8));
 
          //zaisheng制动能耗      ID_PIBTCU_1_LABEL_CRA2LINEVOLTAGE
 
-         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA2LINEVOLTAGE))->SetCtrlText(QString::number(TR1CT_BrkPowerConsumption_U8));
-         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA3LINEVOLTAGE))->SetCtrlText(QString::number(TR2CT_BrkPowerConsumption_U8));
-         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA4LINEVOLTAGE))->SetCtrlText(QString::number(TR3CT_BrkPowerConsumption_U8));
-         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA5LINEVOLTAGE))->SetCtrlText(QString::number(TR4CT_BrkPowerConsumption_U8));
+         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA2LINEVOLTAGE))->SetCtrlText(QString::number(TR1CT_BrkPowerConsumption_U8)+"/"+QString::number(TR1CT_RHBrkPowerConsumption_U8));
+         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA3LINEVOLTAGE))->SetCtrlText(QString::number(TR2CT_BrkPowerConsumption_U8)+"/"+QString::number(TR2CT_RHBrkPowerConsumption_U8));
+         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA4LINEVOLTAGE))->SetCtrlText(QString::number(TR3CT_BrkPowerConsumption_U8)+"/"+QString::number(TR3CT_RHBrkPowerConsumption_U8));
+         ((CLabel *)GetDlgItem(ID_PIBTCU_1_LABEL_CRA5LINEVOLTAGE))->SetCtrlText(QString::number(TR4CT_BrkPowerConsumption_U8)+"/"+QString::number(TR4CT_RHBrkPowerConsumption_U8));
 
          //电网电压            ID_PIBTCU_1_LABEL_CRA2INVERSECURRENT
 
