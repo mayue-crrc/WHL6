@@ -92,7 +92,7 @@ ST_FAULT_INFO g_faultsinforom[] =
     {0x3102,QObject::trUtf8("向前向后方向都激活"),QObject::trUtf8("DI 同时采集到向前、向后指令"),QObject::trUtf8("检查司控器")},
     {0x3103,QObject::trUtf8("牵引制动均激活"),QObject::trUtf8("DI 同时采集到牵引、制动指令"),QObject::trUtf8("检查司控器")},
     {0x3104,QObject::trUtf8("同时收到开左门与开右门信号"),QObject::trUtf8("DI 同时采集到开左门、开右门信号"),QObject::trUtf8("检查左门使能与右门使能开关")},
-    {0x3105,QObject::trUtf8("刀开关状态均无效故障"),QObject::trUtf8("若受电弓位和库用位两个刀开关信号均为高电平则视为刀开关状态监视故障"),QObject::trUtf8("检查刀开关")},
+    {0x3105,QObject::trUtf8("刀开关状态均无效故障"),QObject::trUtf8("若受电弓位和库用位两个刀开关信号均为低电平则视为刀开关状态监视故障"),QObject::trUtf8("检查刀开关")},
     {0x3206,QObject::trUtf8("空压机1接触器故障"),QObject::trUtf8("如果网络已发出空压机启动命令，在3秒后仍然没有收到空压机接触器反馈信号，则会报“空压机接触器故障”"),QObject::trUtf8("检查空压机")},
     {0x3107,QObject::trUtf8("刀开关状态均有效故障"),QObject::trUtf8("若受电弓位和库用位两个刀开关信号均为低电平则视为刀开关状态监视故障"),QObject::trUtf8("检查刀开关")},
     {0x3108,QObject::trUtf8("空压机故障"),QObject::trUtf8("空压机可用为0"),QObject::trUtf8("检查空压机")},
@@ -176,11 +176,25 @@ ST_FAULT_INFO g_faultsinforom[] =
 {0x5161,QObject::trUtf8("大事件"),QObject::trUtf8("CAN单元级别的事件，被认为是大故障。"),QObject::trUtf8("A 通常运行到下一站，清客，返回车辆段。")},
 {0x5262,QObject::trUtf8("中等事件"),QObject::trUtf8("CAN单元级别的事件，被认为是中等故障。"),QObject::trUtf8("B 如果制动经由截断塞门缓解，正常运营一个往返，然后返回车辆段。")},
 {0x5363,QObject::trUtf8("小事件"),QObject::trUtf8("CAN单元级别的事件，被认为是小故障。"),QObject::trUtf8("C 列车运营至当天结束，不再投入运营。")},
+
+{0x5164,QObject::trUtf8("Tc1车转向架1紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断Tc1车转向架1紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5165,QObject::trUtf8("Tc1车转向架2紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断Tc1车转向架2紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5166,QObject::trUtf8("Mp1车转向架1紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断Mp1车转向架1紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5167,QObject::trUtf8("Mp1车转向架2紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断Mp1车转向架2紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5168,QObject::trUtf8("M1车转向架1紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断M1车转向架1紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5169,QObject::trUtf8("M1车转向架2紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断M1车转向架2紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5170,QObject::trUtf8("Tc2车转向架1紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断Tc2车转向架1紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5171,QObject::trUtf8("Tc2车转向架2紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断Tc2车转向架2紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5172,QObject::trUtf8("Mp2车转向架1紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断Mp2车转向架1紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5173,QObject::trUtf8("Mp2车转向架2紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断Mp2车转向架2紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5174,QObject::trUtf8("M2车转向架1紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断M2车转向架1紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+{0x5175,QObject::trUtf8("M2车转向架2紧急制动激活"),QObject::trUtf8("列车紧急制动缓解，制动系统判断M2车转向架2紧急制动激活"),QObject::trUtf8("A 检查列车紧急制动状态或制动系统状态是否正常。")},
+
 //DCU
 
 {0x6101,QObject::trUtf8("架线过电流"),QObject::trUtf8("架线过电流"),QObject::trUtf8("请按复位按钮")},
 {0x6102,QObject::trUtf8("变流失败（IGBT故障）"),QObject::trUtf8("变流失败（IGBT故障）"),QObject::trUtf8("请按复位按钮")},
-{0x6203,QObject::trUtf8("电机过电流"),QObject::trUtf8("变流失败（IGBT故障）"),QObject::trUtf8("关闭牵引,关闭制动")},
+{0x6203,QObject::trUtf8("电机过电流"),QObject::trUtf8("电机过电流"),QObject::trUtf8("关闭牵引,关闭制动")},
 {0x6204,QObject::trUtf8("相不平衡"),QObject::trUtf8("输出三相不平衡"),QObject::trUtf8("关闭牵引,关闭制动")},
 {0x6205,QObject::trUtf8("充电故障"),QObject::trUtf8("充电不良"),QObject::trUtf8("关闭牵引,关闭制动")},
 {0x6106,QObject::trUtf8("门极电源低电压"),QObject::trUtf8("门极电源低电压"),QObject::trUtf8("请按复位按钮")},
@@ -660,6 +674,21 @@ FAULTS_ROM_DATA g_faultsrom[]={
     //BCU
     {0x5331,  3,  D_POS_A, 4,   bit0,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
     {0x5132,  1,  D_POS_A, 4,   bit0,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+
+    {0x5164,  1,  D_POS_A, 257,   bit12,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5165,  1,  D_POS_A, 257,   bit11,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5166,  1,  D_POS_B, 257,   bit10,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5167,  1,  D_POS_B, 257,   bit9,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5168,  1,  D_POS_C, 257,   bit8,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5169,  1,  D_POS_C, 258,   bit7,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+
+    {0x5170,  1,  D_POS_F, 258,   bit6,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5171,  1,  D_POS_F, 258,   bit5,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5172,  1,  D_POS_E, 258,   bit4,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5173,  1,  D_POS_E, 258,   bit3,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5174,  1,  D_POS_D, 258,   bit2,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+    {0x5175,  1,  D_POS_D, 258,   bit1,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
+
     //BCU_TC1
     {0x5301,  3,  D_POS_A, 533,   bit8,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
 {0x5303,  3,  D_POS_A, 533,   bit10,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },

@@ -142,7 +142,8 @@ Dialog::Dialog(QWidget *parent) :
     H8::initH8("/dev/ttyUSB_SC");
     WarningDialog = new CRunWarningPage(this);
     WarningDialog->hide();
-
+    WarningDialogMRE = new CRunWarningPage(this);
+    WarningDialogMRE->hide();
     globalDataInit();
     //TC1_HMI=1;
     if(TC1_HMI_ini==1)
@@ -236,6 +237,11 @@ Dialog::Dialog(QWidget *parent) :
     timer30s.start(5000);
     #endif  //windows_demo
 
+    //add mre tips
+    connect(&timer10mins,SIGNAL(timeout()),this,SLOT(OnTimer10mins()));
+    //connect(&timer5s,SIGNAL(timeout()),this,SLOT(OnTimer5s()));
+
+
     connect(&timer5min,SIGNAL(timeout()),this,SLOT(OnTimer5min()));
 
     connect(&timer6sfortiming,SIGNAL(timeout()),this,SLOT(OnTimer6sfortiming()));
@@ -248,6 +254,15 @@ Dialog::Dialog(QWidget *parent) :
     prefaultflg = false;
     m_10sCCULifeSignalcount = 0;
     m_CCUclearflg = false;
+    m_showtips = 0;
+    m_showtips10min = 0;
+    m_isclose = false;
+    connect(WarningDialogMRE,SIGNAL(sendclose(bool)),this,SLOT(getclose(bool)));
+    MREtips = false;
+    MREtips10mins = false;
+    MREturntofault = false;
+    MREfinish10mins = false;
+    old_CTDTi_MRP_U16 = 0;
 #ifdef LOG_OPEN
 
 //    connect(&m_logTimer,SIGNAL(timeout()),this,SLOT(OnLogTimer()));
@@ -468,8 +483,12 @@ void Dialog::OnUpdateData()
                 WarningDialog->hide();
             }
         }
-
     }
+
+
+
+
+
     //输出电压 网压 网流 速度 牵引制动级位 站点信息
     if (pPage->TestControlExists(IDLB_COM_OutputVol))
     {
@@ -542,8 +561,95 @@ void Dialog::OnUpdateData()
             pPage->ChangePage(PAGE_INDEX_RUNSTATE);
         }
     }
-}
 
+
+    //mre tips
+    if(CTDTi_MRP_U16 <700 && old_CTDTi_MRP_U16>=700)
+    {
+        MREturntofault = true;
+        MREtips = true;
+        if(!this->timer10mins.isActive())
+        {
+            this->timer10mins.start(600000);
+        }
+    }
+
+    if((old_CTDTi_MRP_U16<=750 && CTDTi_MRP_U16>750) || MREfinish10mins == true )
+    {
+        MREtips = false;
+        MREtips10mins = false;
+        MREfinish10mins = false;
+        this->timer10mins.stop();
+    }
+
+
+    if(MREtips10mins)
+    {
+        WarningDialogMRE->setGeometry(312,200,WarningDialogMRE->width(),WarningDialogMRE->height());
+        WarningDialogMRE->setwarningcolor(1);
+        WarningDialogMRE->wariningstr(QObject::trUtf8("总风压力\n低于7bar\n超过十分钟！!"));
+        WarningDialogMRE->show();
+        WarningDialogMRE->showbutton(true);
+        if(m_showtips10min++>25 || this->m_isclose)
+        {
+            WarningDialogMRE->hide();
+            m_showtips10min = 30;
+            //MREtips10mins = false;
+
+        }else
+        {
+            WarningDialogMRE->show();
+        }
+        m_showtips = 0;
+
+    }else if(MREtips)
+    {
+        WarningDialogMRE->setGeometry(312,200,WarningDialogMRE->width(),WarningDialogMRE->height());
+        WarningDialogMRE->setwarningcolor(2);
+        WarningDialogMRE->wariningstr(QObject::trUtf8("总风压力\n低于7bar！"));
+        WarningDialogMRE->show();
+        WarningDialogMRE->showbutton(false);
+
+        if(m_showtips++>50)
+        {
+            WarningDialogMRE->hide();
+            m_showtips = 60;
+        }else
+        {
+            WarningDialogMRE->show();
+        }
+        this->m_isclose = false;
+        m_showtips10min = 0;
+
+    }else
+    {
+       m_showtips = 0;
+       m_showtips10min = 0;
+       WarningDialogMRE->hide();
+
+    }
+
+
+    old_CTDTi_MRP_U16 = CTDTi_MRP_U16;
+}
+void Dialog::OnTimer10mins()
+{
+    if(CTDTi_MRP_U16 < 700 )
+    {
+        MREtips10mins = true;
+    }else
+    {
+        MREfinish10mins = true;
+
+        MREtips10mins = false;
+        MREtips = false;
+    }
+
+}
+void Dialog::getclose(bool b)
+{
+    this->m_isclose = b;
+}
 void Dialog::OnUpdateDate()
 {
 
@@ -8570,7 +8676,7 @@ void Dialog::createSendData()
         HMI_HMCT_LifeSignal_U16 = 0;
     }
     HMiCT_HMISWVerH_U8 = 2;
-    HMiCT_HMISWVerL_U8 = 19;
+    HMiCT_HMISWVerL_U8 = 21;
     HMCT_LineNum_U8 = 6;
     ///PORT310
     sendData[0] = HMI_HMCT_LifeSignal_U16/256;
@@ -9255,8 +9361,9 @@ void Dialog::OnTimer5min()
     //qDebug("close screen");
     system("xset s 12000");
     timer5min.stop();
-
 }
+
+
 void Dialog::C2Hmorethan3sFunc()
 {
     QDateTime dateTimeSystem;

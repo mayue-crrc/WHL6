@@ -623,7 +623,16 @@ void CPage::UpdateTractionLevel(int id)
         this->GetDlgItem(id)->SetTxtColor(Qt::red);
         this->GetDlgItem(id)->SetCtrlText(("40 km/h"));
         g_speedlimitvalue = 40;
-    }else if(CTHM_TractionBlock23_B1)
+    }
+    else if( (CTHM_DCU2_Online_B1&&TR1CT_EmgyMode_B1) || (CTHM_DCU3_Online_B1&&TR2CT_EmgyMode_B1)
+    || (CTHM_DCU4_Online_B1&&TR3CT_EmgyMode_B1) || (CTHM_DCU5_Online_B1&&TR4CT_EmgyMode_B1))
+    {
+        this->GetDlgItem(id)->SetTxtColor(Qt::red);
+        this->GetDlgItem(id)->SetCtrlText(("45 km/h"));
+        g_speedlimitvalue = 45;
+    }
+
+    else if(CTHM_TractionBlock23_B1)
     {
         this->GetDlgItem(id)->SetTxtColor(Qt::red);
         this->GetDlgItem(id)->SetCtrlText(("50 km/h"));

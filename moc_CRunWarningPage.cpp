@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'CRunWarningPage.h'
 **
-** Created: Thu Sep 6 17:58:58 2018
+** Created: Wed Jun 12 14:18:59 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,21 +23,25 @@ static const uint qt_meta_data_CRunWarningPage[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      19,   17,   16,   16, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      17,   16,   16,   16, 0x08,
+      35,   16,   16,   16, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_CRunWarningPage[] = {
-    "CRunWarningPage\0\0on_pushButton_pressed()\0"
+    "CRunWarningPage\0\0b\0sendclose(bool)\0"
+    "on_pushButton_pressed()\0"
 };
 
 const QMetaObject CRunWarningPage::staticMetaObject = {
@@ -69,11 +73,19 @@ int CRunWarningPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: on_pushButton_pressed(); break;
+        case 0: sendclose((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 1: on_pushButton_pressed(); break;
         default: ;
         }
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
+}
+
+// SIGNAL 0
+void CRunWarningPage::sendclose(bool _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_END_MOC_NAMESPACE

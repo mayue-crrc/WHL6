@@ -7,6 +7,7 @@ CRunWarningPage::CRunWarningPage(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->pushButton->hide();
+    m_isclose = false;
 }
 
 CRunWarningPage::~CRunWarningPage()
@@ -30,11 +31,23 @@ void CRunWarningPage::on_pushButton_pressed()
 //        Warningconfirm5km = false;
 
 //    }
+    sendclose(true);
+
     this->close();
 }
 void CRunWarningPage::wariningstr(QString str)
 {
     ui->label->setText(str);
+}
+void CRunWarningPage::showEvent(QShowEvent *)
+{
+}
+void CRunWarningPage::showbutton(bool flg)
+{
+    if(flg)
+        this->ui->pushButton->show();
+    else
+        this->ui->pushButton->hide();
 }
 void CRunWarningPage::setwarningcolor(int color)
 {

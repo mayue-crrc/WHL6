@@ -362,6 +362,19 @@
 #define DTiCT_M2PowerFlt_B1                           g_dataBuffer_WH_Display[257]&bit14
 #define DTiCT_Mp2PowerFlt_B1                           g_dataBuffer_WH_Display[257]&bit13
 
+#define DTiCT_EBActiTC1Bog1_B1                           g_dataBuffer_WH_Display[257]&bit12
+#define DTiCT_EBActiTC1Bog2_B1                           g_dataBuffer_WH_Display[257]&bit11
+#define DTiCT_EBActiMp1Bog1_B1                           g_dataBuffer_WH_Display[257]&bit10
+#define DTiCT_EBActiMp1Bog2_B1                           g_dataBuffer_WH_Display[257]&bit9
+#define DTiCT_EBActiM1Bog1_B1                           g_dataBuffer_WH_Display[257]&bit8
+#define DTiCT_EBActiM1Bog2_B1                           g_dataBuffer_WH_Display[258]&bit7
+#define DTiCT_EBActiTC2Bog1_B1                           g_dataBuffer_WH_Display[258]&bit6
+#define DTiCT_EBActiTC2Bog2_B1                           g_dataBuffer_WH_Display[258]&bit5
+#define DTiCT_EBActiMp2Bog1_B1                           g_dataBuffer_WH_Display[258]&bit4
+#define DTiCT_EBActiMp2Bog2_B1                           g_dataBuffer_WH_Display[258]&bit3
+#define DTiCT_EBActiM2Bog1_B1                           g_dataBuffer_WH_Display[258]&bit2
+#define DTiCT_EBActiM2Bog2_B1                           g_dataBuffer_WH_Display[258]&bit1
+
 //218 CCU->ERM
 #define CTDTi_MRP_U16                               Change_BigEen(g_dataBuffer_WH_Display[1848])
 //508 ccu-> bcu
@@ -614,7 +627,7 @@
 #define TR1CT_MotorCur_U8                              g_dataBuffer_WH_Display[656+192+13] % 256
 #define TR1CT_DCUCheckAnswer_B1                         g_dataBuffer_MVB[656+192+12] & bit5
 #define TR1CT_IsolateCommand_B1                        g_dataBuffer_MVB[656+192+11] & bit9
-
+#define TR1CT_EmgyMode_B1                               g_dataBuffer_MVB[656+192+10] & bit4
 //0x611 DCU(Mp1)_CCU_2
 #define TR1CT_EDBrakeFdBk_U8                           g_dataBuffer_WH_Display[672+192+1] % 256
 #define TR1CT_LineVoltage_U8                           g_dataBuffer_WH_Display[672+192+2] / 256
@@ -643,6 +656,7 @@
 #define TR2CT_MotorCur_U8                              g_dataBuffer_WH_Display[704+192+13] % 256
 #define TR2CT_DCUCheckAnswer_B1                         g_dataBuffer_MVB[704+192+12] & bit5
 #define TR2CT_IsolateCommand_B1                        g_dataBuffer_MVB[704+192+11] & bit9
+#define TR2CT_EmgyMode_B1                               g_dataBuffer_MVB[704+192+10] & bit4
 
 //0x621 DCU(M1)_CCU_2
 #define TR2CT_EDBrakeFdBk_U8                           g_dataBuffer_WH_Display[720+192+1] % 256
@@ -671,6 +685,7 @@
 #define TR3CT_MotorCur_U8                              g_dataBuffer_WH_Display[752+192+13] % 256
 #define TR3CT_DCUCheckAnswer_B1                         g_dataBuffer_MVB[752+192+12] & bit5
 #define TR3CT_IsolateCommand_B1                        g_dataBuffer_MVB[752+192+11] & bit9
+#define TR3CT_EmgyMode_B1                               g_dataBuffer_MVB[752+192+10] & bit4
 
 
 //0x631 DCU(M2)_CCU_2
@@ -700,6 +715,7 @@
 #define TR4CT_MotorCur_U8                              g_dataBuffer_WH_Display[800+192+13] % 256
 #define TR4CT_DCUCheckAnswer_B1                         g_dataBuffer_MVB[800+192+12] & bit5
 #define TR4CT_IsolateCommand_B1                        g_dataBuffer_MVB[800+192+11] & bit9
+#define TR4CT_EmgyMode_B1                               g_dataBuffer_MVB[800+192+10] & bit4
 
 
 //0x641 DCU(Mp2)_CCU_2
@@ -1294,6 +1310,19 @@
 #define   BR2CT_SeriousFaultMBog2_B1                         g_dataBuffer_WH_Display[528+6+192]&bit7
 #define   BR2CT_SlightFaultMBog2_B1                         g_dataBuffer_WH_Display[528+6+192]&bit9
 
+
+#define   BR1CT_EBActiTCBog1_B1                        g_dataBuffer_WH_Display[512+12]&bit3
+#define   BR1CT_EBActiTCBog2_B1                        g_dataBuffer_WH_Display[512+12]&bit4
+#define   BR1CT_EBActiMPBog1_B1                        g_dataBuffer_WH_Display[512+12]&bit5
+#define   BR1CT_EBActiMPBog2_B1                        g_dataBuffer_WH_Display[512+12]&bit6
+#define   BR1CT_EBActiMBog1_B1                        g_dataBuffer_WH_Display[512+12]&bit7
+#define   BR1CT_EBActiMBog2_B1                        g_dataBuffer_WH_Display[512+12]&bit8
+#define   BR2CT_EBActiTCBog1_B1                        g_dataBuffer_WH_Display[512+12+192]&bit3
+#define   BR2CT_EBActiTCBog2_B1                        g_dataBuffer_WH_Display[512+12+192]&bit4
+#define   BR2CT_EBActiMPBog1_B1                        g_dataBuffer_WH_Display[512+12+192]&bit5
+#define   BR2CT_EBActiMPBog2_B1                        g_dataBuffer_WH_Display[512+12+192]&bit6
+#define   BR2CT_EBActiMBog1_B1                        g_dataBuffer_WH_Display[512+12+192]&bit7
+#define   BR2CT_EBActiMBog2_B1                        g_dataBuffer_WH_Display[512+12+192]&bit8
 //508 CCU->TCU
 #define CTBR_Grade_U8                                       g_dataBuffer_WH_Display[1936] %256
 #define CTBR_Braking_B1                                     g_dataBuffer_WH_Display[1936] &bit10

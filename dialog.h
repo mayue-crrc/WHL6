@@ -160,6 +160,7 @@ public:
 private:
     SerialThread* m_serialThread;
     CRunWarningPage* WarningDialog;
+    CRunWarningPage* WarningDialogMRE;
 
 #ifdef USE_MVB_DATA
     MvbThread *m_mvbthread;
@@ -246,9 +247,18 @@ protected slots:
     void ReadFile();
 
 
-
+    void OnTimer10mins();
+    //void OnTimer5s();
+    void getclose(bool b);
 private:
     Ui::Dialog *ui;
+    QTimer timer10mins;
+    QTimer timer5s;
+    int m_showtips,m_showtips10min;
+    bool m_isclose;
+
+    bool MREtips,MREtips10mins,MREturntofault,MREfinish10mins;
+    unsigned short int old_CTDTi_MRP_U16;
 };
 
 #endif // DIALOG_H

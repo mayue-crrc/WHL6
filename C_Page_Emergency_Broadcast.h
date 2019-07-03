@@ -66,6 +66,7 @@ protected:
     void On6BtnClk();
     void On7BtnClk();
     void On8BtnClk();
+    void On9BtnClk();
     void OnIBCStopBpBtnClk();
     int m_Emergency_PrePageIndex;
 

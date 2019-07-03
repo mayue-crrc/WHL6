@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'dialog.h'
 **
-** Created: Fri Dec 28 10:16:27 2018
+** Created: Wed Jul 3 08:59:54 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Dialog[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      16,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -47,6 +47,8 @@ static const uint qt_meta_data_Dialog[] = {
      233,    7,    7,    7, 0x09,
      260,  253,  245,    7, 0x09,
      278,    7,    7,    7, 0x09,
+     289,    7,    7,    7, 0x09,
+     307,  305,    7,    7, 0x09,
 
        0        // eod
 };
@@ -60,6 +62,7 @@ static const char qt_meta_stringdata_Dialog[] = {
     "getRevDataSlot(int,QByteArray,int)\0"
     "OpenPort()\0ClosePort()\0QString\0sc_com\0"
     "SendText(QString)\0ReadFile()\0"
+    "OnTimer10mins()\0b\0getclose(bool)\0"
 };
 
 const QMetaObject Dialog::staticMetaObject = {
@@ -106,9 +109,11 @@ int Dialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 12: { QString _r = SendText((*reinterpret_cast< QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
         case 13: ReadFile(); break;
+        case 14: OnTimer10mins(); break;
+        case 15: getclose((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 14;
+        _id -= 16;
     }
     return _id;
 }

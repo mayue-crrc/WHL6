@@ -1218,30 +1218,30 @@ void CRunStatePage::UpdateBCUState()
 {
 
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR01_G),
-                        BR1CT_SeriousFaultTCBog1_B1,BR1CT_SlightFaultTCBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+                        DTiCT_EBActiTC1Bog1_B1||BR1CT_SeriousFaultTCBog1_B1,BR1CT_SlightFaultTCBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR01_S),
-                        BR1CT_SeriousFaultTCBog2_B1,BR1CT_SlightFaultTCBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+                        DTiCT_EBActiTC1Bog2_B1||BR1CT_SeriousFaultTCBog2_B1,BR1CT_SlightFaultTCBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR02_S1),
-                        BR1CT_SeriousFaultMpBog1_B1,BR1CT_SlightFaultMpBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+                        DTiCT_EBActiMp1Bog1_B1||BR1CT_SeriousFaultMpBog1_B1,BR1CT_SlightFaultMpBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR02_S2),
-                        BR1CT_SeriousFaultMpBog2_B1,BR1CT_SlightFaultMpBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+                        DTiCT_EBActiMp1Bog2_B1||BR1CT_SeriousFaultMpBog2_B1,BR1CT_SlightFaultMpBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR03_S),
-                        BR1CT_SeriousFaultMBog1_B1,BR1CT_SlightFaultMBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+                        DTiCT_EBActiM1Bog1_B1||BR1CT_SeriousFaultMBog1_B1,BR1CT_SlightFaultMBog1_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR03_G),
-                        BR1CT_SeriousFaultMBog2_B1,BR1CT_SlightFaultMBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
+                        DTiCT_EBActiM1Bog2_B1||BR1CT_SeriousFaultMBog2_B1,BR1CT_SlightFaultMBog2_B1,CTHMI_BCU1On_B1||CTHMI_BCU2On_B1);
 
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR06_G),
-                        BR2CT_SeriousFaultTCBog1_B1,BR2CT_SlightFaultTCBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+                        DTiCT_EBActiTC2Bog1_B1||BR2CT_SeriousFaultTCBog1_B1,BR2CT_SlightFaultTCBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR06_S),
-                        BR2CT_SeriousFaultTCBog2_B1,BR2CT_SlightFaultTCBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+                        DTiCT_EBActiTC2Bog2_B1||BR2CT_SeriousFaultTCBog2_B1,BR2CT_SlightFaultTCBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR05_S1),
-                        BR2CT_SeriousFaultMpBog1_B1,BR2CT_SlightFaultMpBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+                        DTiCT_EBActiMp2Bog1_B1||BR2CT_SeriousFaultMpBog1_B1,BR2CT_SlightFaultMpBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR05_S2),
-                        BR2CT_SeriousFaultMpBog2_B1,BR2CT_SlightFaultMpBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+                        DTiCT_EBActiMp2Bog2_B1||BR2CT_SeriousFaultMpBog2_B1,BR2CT_SlightFaultMpBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR04_S),
-                        BR2CT_SeriousFaultMBog1_B1,BR2CT_SlightFaultMBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+                        DTiCT_EBActiM2Bog1_B1||BR2CT_SeriousFaultMBog1_B1,BR2CT_SlightFaultMBog1_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
     setBCUBGStatus((CLabel *)GetDlgItem(ID_LABEL_BCU_CAR04_G),
-                        BR2CT_SeriousFaultMBog2_B1,BR2CT_SlightFaultMBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
+                        DTiCT_EBActiM2Bog2_B1||BR2CT_SeriousFaultMBog2_B1,BR2CT_SlightFaultMBog2_B1,CTHMI_BCU3On_B1||CTHMI_BCU4On_B1);
 
 
     //WHL6BCUFault.PNG

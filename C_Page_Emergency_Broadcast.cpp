@@ -12,26 +12,26 @@ ROMDATA g_PicRom_InstancyBroadcast[] =
     /*string                font                            rc                  foreground color              background color                control type                   ID           */
     //D_COMMON_PAGE_HEADER(QObject::trUtf8("紧急广播"))
     {QObject::trUtf8("临时停车"),                D_FONT_BOLD(8),      QRect( 55, 70+30, 120,  38),            Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R1     },
-    {QObject::trUtf8("调整运行"),                D_FONT_BOLD(8),      QRect( 55, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R1     },
+    {QObject::trUtf8("大客流广播上车"),                D_FONT_BOLD(8),      QRect( 55, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R1     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect( 55, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R1     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect( 55, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R1     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect( 55, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R1     },
-    {QObject::trUtf8("退出服务1"),                   D_FONT_BOLD(8),      QRect(195,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R2     },
-    {QObject::trUtf8("大客流广播上"),                D_FONT_BOLD(8),      QRect(195, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R2     },
+    {QObject::trUtf8("下一站退出服务"),                   D_FONT_BOLD(8),      QRect(195,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R2     },
+    {QObject::trUtf8("大客流广播下车"),                D_FONT_BOLD(8),      QRect(195, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R2     },
 //    {QObject::trUtf8("") ,                D_FONT_BOLD(8),      QRect(195, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R2     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(195, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R2     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(195, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R2     },
-    {QObject::trUtf8("退出服务2"),                D_FONT_BOLD(8),      QRect(335,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R3     },
-    {QObject::trUtf8("大客流广播下"),                D_FONT_BOLD(8),      QRect(335, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R3     },
+    {QObject::trUtf8("本站退出服务"),                D_FONT_BOLD(8),      QRect(335,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R3     },
+    {QObject::trUtf8("照明中断"),                D_FONT_BOLD(8),      QRect(335, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R3     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(335, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R3     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(335, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R3     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(335, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R3     },
-    {QObject::trUtf8("区间疏散"),                    D_FONT_BOLD(8),      QRect(475,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R4     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(475, 140, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R4     },
+    {QObject::trUtf8("区间下车"),                    D_FONT_BOLD(8),      QRect(475,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R4     },
+    {QObject::trUtf8("列车车厢火灾"),                D_FONT_BOLD(8),      QRect(475, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R4     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(475, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R4     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(475, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R4     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(475, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R4     },
-    {QObject::trUtf8("列车连挂"),                 D_FONT_BOLD(8),      QRect(615,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R5     },
+    {QObject::trUtf8("列车通过"),                 D_FONT_BOLD(8),      QRect(615,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R5     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(615, 140, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R5     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(615, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R5     },
 //    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(615, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R5     },
@@ -72,6 +72,7 @@ BEGIN_MESSAGE_MAP(CInstancyBroadcastPage,CPage)
         ON_BTNCLK(ID_PIBIB_BUTTON_L2R1,On6BtnClk)
         ON_BTNCLK(ID_PIBIB_BUTTON_L2R2,On7BtnClk)
         ON_BTNCLK(ID_PIBIB_BUTTON_L2R3,On8BtnClk)
+        ON_BTNCLK(ID_PIBIB_BUTTON_L2R4,On9BtnClk)
 
         ON_BTNCLK(ID_LABEL_REALTIMEFAULTCONFIRM, OnRealtimefaultBtnClk)
         //ON_BTNCLK(ID_PIBIB_BUTTON_IBSTOP,OnIBCStopBpBtnClk)
@@ -121,6 +122,7 @@ void CInstancyBroadcastPage::OnUpdatePage()
                 ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
                 ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
                 ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 
               }
@@ -156,6 +158,7 @@ void CInstancyBroadcastPage::OnInitPage()
     ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->m_bAutoUpState = false;
     ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->m_bAutoUpState = false;
     ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->m_bAutoUpState = false;
+    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->m_bAutoUpState = false;
     //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_IBSTOP))->m_bAutoUpState = false;
 
 }
@@ -490,7 +493,23 @@ void CInstancyBroadcastPage::On8BtnClk()
 //    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
 
 }
+void CInstancyBroadcastPage::On9BtnClk()
+{
+    //BitSet(HMI_send_data26,14,0);
+    HMiCT_EmgyBroadcastID_U8 = 9;
+    m_bStart_FireAlarm = true;
+    set_timer_FireAlarm= 3;
+    SetBtnDown(ID_PIBIB_BUTTON_L2R4);
+//    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
+//    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
+//    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
+//    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R4))->ChangeButtonState(LBUTTON_UP);
+//    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R5))->ChangeButtonState(LBUTTON_UP);
+//    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
+//    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
 
+}
 
 void CInstancyBroadcastPage::OnIBCStopBpBtnClk()
 {
@@ -511,10 +530,11 @@ void CInstancyBroadcastPage::SetBtnDown(int nBtnID)
         ID_PIBIB_BUTTON_L1R5,
         ID_PIBIB_BUTTON_L2R1,
         ID_PIBIB_BUTTON_L2R2,
-        ID_PIBIB_BUTTON_L2R3
+        ID_PIBIB_BUTTON_L2R3,
+        ID_PIBIB_BUTTON_L2R4
     };
 
-    for (int i=0; i<8; i++)
+    for (int i=0; i<9; i++)
     {
         if (nIDArray[i] == nBtnID)
         {
