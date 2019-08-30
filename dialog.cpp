@@ -144,6 +144,8 @@ Dialog::Dialog(QWidget *parent) :
     WarningDialog->hide();
     WarningDialogMRE = new CRunWarningPage(this);
     WarningDialogMRE->hide();
+    WarningDialogMRE->showbutton(true);
+
     globalDataInit();
     //TC1_HMI=1;
     if(TC1_HMI_ini==1)
@@ -262,7 +264,7 @@ Dialog::Dialog(QWidget *parent) :
     MREtips10mins = false;
     MREturntofault = false;
     MREfinish10mins = false;
-    old_CTDTi_MRP_U16 = 0;
+    old_DTiCT_MRPLow_B1 = 0;
 #ifdef LOG_OPEN
 
 //    connect(&m_logTimer,SIGNAL(timeout()),this,SLOT(OnLogTimer()));
@@ -564,9 +566,18 @@ void Dialog::OnUpdateData()
 
 
     //mre tips
-    if(CTDTi_MRP_U16 <700 && old_CTDTi_MRP_U16>=700)
+//    if(CTDTi_MRP_U16 <700 && old_CTDTi_MRP_U16>=700)
+//    {
+//        MREturntofault = true;
+//        MREtips = true;
+//        if(!this->timer10mins.isActive())
+//        {
+//            this->timer10mins.start(600000);
+//        }
+//    }
+
+    if((DTiCT_MRPLow_B1 ^ old_DTiCT_MRPLow_B1) && DTiCT_MRPLow_B1)
     {
-        MREturntofault = true;
         MREtips = true;
         if(!this->timer10mins.isActive())
         {
@@ -574,27 +585,41 @@ void Dialog::OnUpdateData()
         }
     }
 
-    if((old_CTDTi_MRP_U16<=750 && CTDTi_MRP_U16>750) || MREfinish10mins == true )
+    if((DTiCT_MRPLow_B1 ^ old_DTiCT_MRPLow_B1) && !DTiCT_MRPLow_B1)
     {
-        MREtips = false;
-        MREtips10mins = false;
-        MREfinish10mins = false;
         this->timer10mins.stop();
+        MREtips10mins = false;
+        MREtips = false;
     }
+//    else
+//    {
+//        this->timer10mins.stop();
+//        MREtips10mins = false;
+//        MREtips = false;
+
+//    }
+
+//    if((old_CTDTi_MRP_U16<=750 && CTDTi_MRP_U16>750) || MREfinish10mins == true )
+//    {
+//        MREtips = false;
+//        MREtips10mins = false;
+//        MREfinish10mins = false;
+//        this->timer10mins.stop();
+//    }
 
 
-    if(MREtips10mins)
+    if(MREtips10mins )
     {
         WarningDialogMRE->setGeometry(312,200,WarningDialogMRE->width(),WarningDialogMRE->height());
         WarningDialogMRE->setwarningcolor(1);
         WarningDialogMRE->wariningstr(QObject::trUtf8("总风压力\n低于7bar\n超过十分钟！!"));
         WarningDialogMRE->show();
-        WarningDialogMRE->showbutton(true);
-        if(m_showtips10min++>25 || this->m_isclose)
+        //WarningDialogMRE->showbutton(true);
+        if(m_showtips10min++>50 || this->m_isclose)
         {
             WarningDialogMRE->hide();
-            m_showtips10min = 30;
-            //MREtips10mins = false;
+            m_showtips10min = 60;
+            MREtips10mins = false;
 
         }else
         {
@@ -602,17 +627,18 @@ void Dialog::OnUpdateData()
         }
         m_showtips = 0;
 
-    }else if(MREtips)
+    }else if(MREtips )
     {
         WarningDialogMRE->setGeometry(312,200,WarningDialogMRE->width(),WarningDialogMRE->height());
         WarningDialogMRE->setwarningcolor(2);
         WarningDialogMRE->wariningstr(QObject::trUtf8("总风压力\n低于7bar！"));
         WarningDialogMRE->show();
-        WarningDialogMRE->showbutton(false);
+        //WarningDialogMRE->showbutton(false);
 
-        if(m_showtips++>50)
+        if(m_showtips++>50|| this->m_isclose)
         {
             WarningDialogMRE->hide();
+            MREtips = false;
             m_showtips = 60;
         }else
         {
@@ -628,23 +654,15 @@ void Dialog::OnUpdateData()
        WarningDialogMRE->hide();
 
     }
+    HMiCT_MRPLow_B1 = !WarningDialogMRE->isHidden();
 
 
-    old_CTDTi_MRP_U16 = CTDTi_MRP_U16;
+    old_DTiCT_MRPLow_B1 = DTiCT_MRPLow_B1;
 }
 void Dialog::OnTimer10mins()
 {
-    if(CTDTi_MRP_U16 < 700 )
-    {
         MREtips10mins = true;
-    }else
-    {
-        MREfinish10mins = true;
-
-        MREtips10mins = false;
-        MREtips = false;
-    }
-
+        timer10mins.stop();
 }
 void Dialog::getclose(bool b)
 {
@@ -8701,7 +8719,8 @@ void Dialog::createSendData()
                        HMiCT_SAVEFirstStation_B1<<4|
                        HMiCT_SAVELastStation_B1<<3|
                        HMiCT_HoldBrkRls_B1<<2|
-                       HMiCT_FaultDetection_B1<<1;
+                       HMiCT_FaultDetection_B1<<1|
+                       HMiCT_MRPLow_B1<<0;
     sendData[43] =     HMiCT_HVAC1FireMode_B1<<7|
                         HMiCT_HVAC1PreOff_B1<<6|
                         HMiCT_HVAC1EmgcyVenti_B1<<5|

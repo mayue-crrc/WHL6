@@ -374,7 +374,7 @@
 #define DTiCT_EBActiMp2Bog2_B1                           g_dataBuffer_WH_Display[258]&bit3
 #define DTiCT_EBActiM2Bog1_B1                           g_dataBuffer_WH_Display[258]&bit2
 #define DTiCT_EBActiM2Bog2_B1                           g_dataBuffer_WH_Display[258]&bit1
-
+#define DTiCT_MRPLow_B1                                 g_dataBuffer_WH_Display[258]&bit0
 //218 CCU->ERM
 #define CTDTi_MRP_U16                               Change_BigEen(g_dataBuffer_WH_Display[1848])
 //508 ccu-> bcu

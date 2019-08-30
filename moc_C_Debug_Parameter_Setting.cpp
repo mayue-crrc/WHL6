@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'C_Debug_Parameter_Setting.h'
 **
-** Created: Wed Jul 3 08:59:57 2019
+** Created: Mon Jul 8 10:15:10 2019
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
 **
 ** WARNING! All changes made in this file will be lost!

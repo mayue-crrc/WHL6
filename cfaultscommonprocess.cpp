@@ -106,6 +106,7 @@ ST_FAULT_INFO g_faultsinforom[] =
     {0x3216,QObject::trUtf8("空压机2接触器故障"),QObject::trUtf8("如果网络已发出空压机启动命令，在3秒后仍然没有收到空压机接触器反馈信号，则会报“空压机接触器故障”"),QObject::trUtf8("检查空压机")},
     {0x3217,QObject::trUtf8("扩展允许继电器故障"),QObject::trUtf8("TCMS发出扩展供电指令后4秒内收不到“扩展供电反馈”信号"),QObject::trUtf8("检查扩展供电接触器")},
     {0x3118,QObject::trUtf8("两台充电机故障"),QObject::trUtf8("检测到两台辅逆DC110V无输出或输出故障"),QObject::trUtf8("检查充电机")},
+    {0x3119,QObject::trUtf8("总风压力低于7.0bar"),QObject::trUtf8("总风压力低于7.0Bar触发，高于7.5Bar复位"),QObject::trUtf8("检查总风压力")},
 
 
 
@@ -503,7 +504,7 @@ ST_FAULT_INFO g_faultsinforom[] =
 {0xE421,QObject::trUtf8("脚踏泵隔离"),QObject::trUtf8("0代表隔离"),QObject::trUtf8("")},
 {0xE422,QObject::trUtf8("Mp车摩擦制动2切除"),QObject::trUtf8("0表示切除"),QObject::trUtf8("")},
 {0xE423,QObject::trUtf8("Mp车摩擦制动1切除"),QObject::trUtf8("0表示切除"),QObject::trUtf8("")},
-{0xE424,QObject::trUtf8("总风压力低"),QObject::trUtf8("总风压力低"),QObject::trUtf8("")},
+{0xE424,QObject::trUtf8("总风压力低于5.5Bar"),QObject::trUtf8("总风压力低于5.5Bar"),QObject::trUtf8("")},
 {0xE426,QObject::trUtf8("M车摩擦制动2切除"),QObject::trUtf8("1：表示扩展供电接触器已闭合"),QObject::trUtf8("")},
 {0xE427,QObject::trUtf8("M车摩擦制动1切除"),QObject::trUtf8("0表示切除"),QObject::trUtf8("")},
 {0xE425,QObject::trUtf8("扩展供电已闭合状态"),QObject::trUtf8("0表示切除"),QObject::trUtf8("")},
@@ -558,7 +559,12 @@ ST_FAULT_INFO g_faultsinforom[] =
 {0xE475,QObject::trUtf8("慢行模式激活"),QObject::trUtf8("1=激活"),QObject::trUtf8("")},
 {0xE476,QObject::trUtf8("门零速旁路"),QObject::trUtf8("旁路开关闭合"),QObject::trUtf8("")},
 
-
+{0xE477,QObject::trUtf8("Tc车转向架1紧急制动激活"),QObject::trUtf8("0 =未激活 1 =激活"),QObject::trUtf8("")},
+{0xE478,QObject::trUtf8("Tc车转向架2紧急制动激活"),QObject::trUtf8("0 =未激活 1 =激活"),QObject::trUtf8("")},
+{0xE479,QObject::trUtf8("Mp车转向架1紧急制动激活"),QObject::trUtf8("0 =未激活 1 =激活"),QObject::trUtf8("")},
+{0xE480,QObject::trUtf8("Mp车转向架2紧急制动激活"),QObject::trUtf8("0 =未激活 1 =激活"),QObject::trUtf8("")},
+{0xE481,QObject::trUtf8("M车转向架1紧急制动激活"),QObject::trUtf8("0 =未激活 1 =激活"),QObject::trUtf8("")},
+{0xE482,QObject::trUtf8("M车转向架2紧急制动激活"),QObject::trUtf8("0 =未激活 1 =激活"),QObject::trUtf8("")},
 };
 
 int g_faultsInfoRomLen = sizeof(g_faultsinforom)/sizeof(ST_FAULT_INFO);
@@ -670,6 +676,7 @@ FAULTS_ROM_DATA g_faultsrom[]={
     {0x3216,  1,  D_POS_TRAIN, 257,   bit1,   false,  false, true,  E_FAULTS_CATEGORY_TCMS    },
     {0x3217,  1,  D_POS_TRAIN, 1872+1,   bit9,   false,  false, true,  E_FAULTS_CATEGORY_TCMS    },
     {0x3118,  1,  D_POS_TRAIN, 4,   bit0,   false,  false, true,  E_FAULTS_CATEGORY_TCMS    },
+    {0x3119,  1,  D_POS_TRAIN, 258,   bit0,   false,  false, true,  E_FAULTS_CATEGORY_TCMS    },
 
     //BCU
     {0x5331,  3,  D_POS_A, 4,   bit0,   false,  false, true,  E_FAULTS_CATEGORY_BCU    },
@@ -2222,7 +2229,19 @@ FAULTS_ROM_DATA g_faultsrom[]={
     {0xE475, 4,  D_POS_F,   2224+11,   bit0,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
     {0xE476, 4,  D_POS_F,   192+11,   bit7,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
 
+    {0xE477, 4,  D_POS_A,   257,   bit12,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE478, 4,  D_POS_A,   257,   bit11,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE479, 4,  D_POS_B,   257,   bit10,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE480, 4,  D_POS_B,   257,   bit9,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE481, 4,  D_POS_C,   257,   bit8,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE482, 4,  D_POS_C,   258,   bit7,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
 
+    {0xE477, 4,  D_POS_F,   258,   bit6,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE478, 4,  D_POS_F,   258,   bit5,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE479, 4,  D_POS_E,   258,   bit4,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE480, 4,  D_POS_E,   258,   bit3,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE481, 4,  D_POS_D,   258,   bit2,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
+    {0xE482, 4,  D_POS_D,   258,   bit1,   false,  false, true,  E_FAULTS_CATEGORY_TCMS   },
 //REC
     //TC1
     {0xD201, 2,  D_POS_A,   2275,   bit9,   false,  false, true,  E_FAULTS_CATEGORY_REC   },

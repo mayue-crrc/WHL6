@@ -258,7 +258,8 @@ private:
     bool m_isclose;
 
     bool MREtips,MREtips10mins,MREturntofault,MREfinish10mins;
-    unsigned short int old_CTDTi_MRP_U16;
+    //unsigned short int old_CTDTi_MRP_U16;
+    bool old_DTiCT_MRPLow_B1;
 };
 
 #endif // DIALOG_H

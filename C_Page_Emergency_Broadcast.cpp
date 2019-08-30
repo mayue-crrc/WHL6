@@ -12,32 +12,24 @@ ROMDATA g_PicRom_InstancyBroadcast[] =
     /*string                font                            rc                  foreground color              background color                control type                   ID           */
     //D_COMMON_PAGE_HEADER(QObject::trUtf8("紧急广播"))
     {QObject::trUtf8("临时停车"),                D_FONT_BOLD(8),      QRect( 55, 70+30, 120,  38),            Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R1     },
-    {QObject::trUtf8("大客流广播上车"),                D_FONT_BOLD(8),      QRect( 55, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R1     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect( 55, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R1     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect( 55, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R1     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect( 55, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R1     },
+    {QObject::trUtf8("大客流广播上车"),                D_FONT_BOLD(8),      QRect( 195, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R2     },
     {QObject::trUtf8("下一站退出服务"),                   D_FONT_BOLD(8),      QRect(195,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R2     },
-    {QObject::trUtf8("大客流广播下车"),                D_FONT_BOLD(8),      QRect(195, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R2     },
-//    {QObject::trUtf8("") ,                D_FONT_BOLD(8),      QRect(195, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R2     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(195, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R2     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(195, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R2     },
+    {QObject::trUtf8("大客流广播下车"),                D_FONT_BOLD(8),      QRect(335, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R3     },
     {QObject::trUtf8("本站退出服务"),                D_FONT_BOLD(8),      QRect(335,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R3     },
-    {QObject::trUtf8("照明中断"),                D_FONT_BOLD(8),      QRect(335, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R3     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(335, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R3     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(335, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R3     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(335, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R3     },
+    {QObject::trUtf8("照明中断"),                D_FONT_BOLD(8),      QRect(55, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R1     },
     {QObject::trUtf8("区间下车"),                    D_FONT_BOLD(8),      QRect(475,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R4     },
     {QObject::trUtf8("列车车厢火灾"),                D_FONT_BOLD(8),      QRect(475, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R4     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(475, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R4     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(475, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R4     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(475, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R4     },
     {QObject::trUtf8("列车通过"),                 D_FONT_BOLD(8),      QRect(615,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R5     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(615, 140, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R5     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(615, 210, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L3R5     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(615, 280, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L4R5     },
-//    {QObject::trUtf8(""),                D_FONT_BOLD(8),      QRect(615, 350, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L5R5     },
-//    {QObject::trUtf8(""),      D_FONT_BOLD(8),      QRect(55, 420, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_IBSTOP   },
-//    {QObject::trUtf8("紧急广播停止"),      D_FONT_BOLD(8),      QRect(55, 420, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_IBSTOP   },
+
+//    {QObject::trUtf8("临时停车"),                D_FONT_BOLD(8),      QRect( 55, 70+30, 120,  38),            Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R1     },
+//    {QObject::trUtf8("调整运行"),                D_FONT_BOLD(8),      QRect( 55, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R1     },
+//    {QObject::trUtf8("退出服务1"),                   D_FONT_BOLD(8),      QRect(195,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R2     },
+//    {QObject::trUtf8("大客流广播上"),                D_FONT_BOLD(8),      QRect(195, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R2     },
+//    {QObject::trUtf8("退出服务2"),                D_FONT_BOLD(8),      QRect(335,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R3     },
+//    {QObject::trUtf8("大客流广播下"),                D_FONT_BOLD(8),      QRect(335, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R3     },
+//    {QObject::trUtf8("区间疏散"),                    D_FONT_BOLD(8),      QRect(475,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R4     },
+//    //{QObject::trUtf8("列车车厢火灾"),                D_FONT_BOLD(8),      QRect(475, 140+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L2R4     },
+//    {QObject::trUtf8("列车连挂"),                 D_FONT_BOLD(8),      QRect(615,  70+30, 120,  38),           Qt::black,               Qt::gray,                CONTROL_BUTTON,           ID_PIBIB_BUTTON_L1R5     },
 
 
 #ifdef PAGE_BUTTON_BAR_NEW
@@ -95,39 +87,61 @@ void CInstancyBroadcastPage::OnUpdatePage()
 //     ((CLabel*)GetDlgItem(ID_PIBIB_BUTTON_L5R5  ))->SetCtrlText(QString::number(m_bStart_FireAlarm)+" "+QString::number(set_timer_FireAlarm)
 //                +" "+QString::number(HMiCT_EmgyBroadcastID_U8));
 
-    if(m_bStart_FireAlarm)
+    if(HMiCT_EmgyBroadcastID_U8>0 && HMiCT_EmgyBroadcastID_U8<10)
     {
-
-         static quint32 times_FireAlarm = 0;
-
-         times_FireAlarm=times_FireAlarm+1;
-
-         HMiCT_EmgyBroadcastCommd_B1 = true;
-
-         if (times_FireAlarm%times_n==0)
+        set_timer_FireAlarm--;
+        if(set_timer_FireAlarm == 0)
         {
-             set_timer_FireAlarm--;
-             if (set_timer_FireAlarm==0)
-             {
-                m_bStart_FireAlarm = false;
-                times_FireAlarm = 0;
-                set_timer_FireAlarm= 3;
-                HMiCT_EmgyBroadcastID_U8 = 0;
-                HMiCT_EmgyBroadcastCommd_B1 = false;
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R4))->ChangeButtonState(LBUTTON_UP);
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R5))->ChangeButtonState(LBUTTON_UP);
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
-                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
-
-
-              }
+            HMiCT_EmgyBroadcastID_U8 = 0;
         }
-     }
+
+    }else{
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R4))->ChangeButtonState(LBUTTON_UP);
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R5))->ChangeButtonState(LBUTTON_UP);
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+        ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
+        set_timer_FireAlarm = 0;
+    }
+
+//    if(m_bStart_FireAlarm)
+//    {
+
+//         static quint32 times_FireAlarm = 0;
+
+//         times_FireAlarm=times_FireAlarm+1;
+
+//         HMiCT_EmgyBroadcastCommd_B1 = true;
+
+//         if (times_FireAlarm%times_n==0)
+//        {
+//             set_timer_FireAlarm--;
+//             if (set_timer_FireAlarm==0)
+//             {
+//                m_bStart_FireAlarm = false;
+//                times_FireAlarm = 0;
+//                set_timer_FireAlarm= 3;
+//                HMiCT_EmgyBroadcastID_U8 = 0;
+//                HMiCT_EmgyBroadcastCommd_B1 = false;
+//                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
+//                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
+//                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
+//                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R4))->ChangeButtonState(LBUTTON_UP);
+//                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R5))->ChangeButtonState(LBUTTON_UP);
+//                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
+//                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
+//                ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//                //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
+
+
+//              }
+//        }
+//     }
 //    if(HMiCT_EmgyBroadcastStop_B1)
 //    {
 //        HMiCT_EmgyBroadcastCommd_B1 = false;
@@ -268,79 +282,72 @@ void CInstancyBroadcastPage::OnRealtimefaultBtnClk()
 
 void CInstancyBroadcastPage::OnComBtn1Clk()
 {
-    m_bStart_FireAlarm = false;
-    set_timer_FireAlarm= 3;
-    HMiCT_EmgyBroadcastID_U8 = 0;
-    HMiCT_EmgyBroadcastCommd_B1 = false;
+//    m_bStart_FireAlarm = false;
+//    HMiCT_EmgyBroadcastID_U8 = 0;
+//    HMiCT_EmgyBroadcastCommd_B1 = false;
 
-    SetBtnDown(NULL);
+//    SetBtnDown(NULL);
     ChangePage(PAGE_INDEX_RUNSTATE);
 }
 
 
 void CInstancyBroadcastPage::OnComBtn2Clk()
 {
-    m_bStart_FireAlarm = false;
-    set_timer_FireAlarm= 3;
-    HMiCT_EmgyBroadcastID_U8 = 0;
-    HMiCT_EmgyBroadcastCommd_B1 = false;
+//    m_bStart_FireAlarm = false;
+//    HMiCT_EmgyBroadcastID_U8 = 0;
+//    HMiCT_EmgyBroadcastCommd_B1 = false;
 
-    SetBtnDown(NULL);
+//    SetBtnDown(NULL);
     ChangePage(PAGE_INDEX_MAINTAIN);
 }
 
 void CInstancyBroadcastPage::OnComBtn3Clk()
 {
-    m_bStart_FireAlarm = false;
-    set_timer_FireAlarm= 3;
-    HMiCT_EmgyBroadcastID_U8 = 0;
-    HMiCT_EmgyBroadcastCommd_B1 = false;
+//    m_bStart_FireAlarm = false;
+//    HMiCT_EmgyBroadcastID_U8 = 0;
+//    HMiCT_EmgyBroadcastCommd_B1 = false;
 
-    SetBtnDown(NULL);
+//    SetBtnDown(NULL);
      ChangePage(PAGE_INDEX_CARSTATUS3);
 }
 
 void CInstancyBroadcastPage::OnComBtn4Clk()
 {
-    m_bStart_FireAlarm = false;
-    set_timer_FireAlarm= 3;
-    HMiCT_EmgyBroadcastID_U8 = 0;
-    HMiCT_EmgyBroadcastCommd_B1 = false;
+//    m_bStart_FireAlarm = false;
+//    HMiCT_EmgyBroadcastID_U8 = 0;
+//    HMiCT_EmgyBroadcastCommd_B1 = false;
 
-    SetBtnDown(NULL);
+//    SetBtnDown(NULL);
      //ChangePage(PAGE_INDEX_CARSTATUS2);
     ChangePage(PAGE_INDEX_TCUBLOCKREASON);
 }
 
 void CInstancyBroadcastPage::OnComBtn5Clk()
 {
-    m_bStart_FireAlarm = false;
-    set_timer_FireAlarm= 3;
-    HMiCT_EmgyBroadcastID_U8 = 0;
-    HMiCT_EmgyBroadcastCommd_B1 = false;
+//    m_bStart_FireAlarm = false;
+//    HMiCT_EmgyBroadcastID_U8 = 0;
+//    HMiCT_EmgyBroadcastCommd_B1 = false;
 
-    SetBtnDown(NULL);
+//    SetBtnDown(NULL);
      ChangePage(PAGE_INDEX_INSTANCYBROADCAST);
 }
 
 void CInstancyBroadcastPage::OnComBtn6Clk()
 {
-    m_bStart_FireAlarm = false;
-    set_timer_FireAlarm= 3;
-    HMiCT_EmgyBroadcastID_U8 = 0;
-    HMiCT_EmgyBroadcastCommd_B1 = false;
+//    m_bStart_FireAlarm = false;
+//    HMiCT_EmgyBroadcastID_U8 = 0;
+//    HMiCT_EmgyBroadcastCommd_B1 = false;
 
-    SetBtnDown(NULL);
+//    SetBtnDown(NULL);
     ChangePage(PAGE_INDEX_FASPage);
 }
 void CInstancyBroadcastPage::OnComBtn7Clk()
 {
-    m_bStart_FireAlarm = false;
-    set_timer_FireAlarm= 3;
-    HMiCT_EmgyBroadcastID_U8 = 0;
-    HMiCT_EmgyBroadcastCommd_B1 = false;
+//    m_bStart_FireAlarm = false;
+//    HMiCT_EmgyBroadcastID_U8 = 0;
+//    HMiCT_EmgyBroadcastCommd_B1 = false;
 
-    SetBtnDown(NULL);
+//    SetBtnDown(NULL);
     ChangePage(PAGE_INDEX_PISALARM);
 }
 
@@ -353,10 +360,22 @@ void CInstancyBroadcastPage::On1BtnClk()
 {
     //BitSet( HMI_send_data26,14,0 );
 
-    HMiCT_EmgyBroadcastID_U8 = 1;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L1R1);
+    if(HMiCT_EmgyBroadcastID_U8 == 1)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 1;
+        SetBtnDown(ID_PIBIB_BUTTON_L1R1);
+    }
+
+//    HMiCT_EmgyBroadcastID_U8 = 1;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L1R1);
 //   // ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -365,17 +384,29 @@ void CInstancyBroadcastPage::On1BtnClk()
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 
 }
 
 void CInstancyBroadcastPage::On2BtnClk()
 {
+    if(HMiCT_EmgyBroadcastID_U8 == 2)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 2;
+        SetBtnDown(ID_PIBIB_BUTTON_L1R2);
+    }
     //BitSet( HMI_send_data26,14,0 );
-    HMiCT_EmgyBroadcastID_U8 = 2;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L1R2);
+//    HMiCT_EmgyBroadcastID_U8 = 2;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L1R2);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //   // ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -384,16 +415,28 @@ void CInstancyBroadcastPage::On2BtnClk()
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 }
 
 void CInstancyBroadcastPage::On3BtnClk()
 {
+    if(HMiCT_EmgyBroadcastID_U8 == 3)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 3;
+        SetBtnDown(ID_PIBIB_BUTTON_L1R3);
+    }
     //BitSet(HMI_send_data26,14,0);
-    HMiCT_EmgyBroadcastID_U8 = 3;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L1R3);
+//    HMiCT_EmgyBroadcastID_U8 = 3;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L1R3);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -402,17 +445,28 @@ void CInstancyBroadcastPage::On3BtnClk()
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 
 }
 
 void CInstancyBroadcastPage::On4BtnClk()
 {
-    //BitSet(HMI_send_data26,14,0);
-    HMiCT_EmgyBroadcastID_U8 = 4;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L1R4);
+    if(HMiCT_EmgyBroadcastID_U8 == 4)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 4;
+        SetBtnDown(ID_PIBIB_BUTTON_L1R4);
+    }
+//    HMiCT_EmgyBroadcastID_U8 = 4;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L1R4);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -421,16 +475,27 @@ void CInstancyBroadcastPage::On4BtnClk()
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 }
 
 void CInstancyBroadcastPage::On5BtnClk()
 {
-    //BitSet(HMI_send_data26,14,0);
-    HMiCT_EmgyBroadcastID_U8 = 5;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L1R5);
+    if(HMiCT_EmgyBroadcastID_U8 == 5)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 5;
+        SetBtnDown(ID_PIBIB_BUTTON_L1R5);
+    }
+//    HMiCT_EmgyBroadcastID_U8 = 5;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L1R5);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -439,16 +504,27 @@ void CInstancyBroadcastPage::On5BtnClk()
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 }
 
 void CInstancyBroadcastPage::On6BtnClk()
 {
-    //BitSet(HMI_send_data26,14,0);
-    HMiCT_EmgyBroadcastID_U8 = 6;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L2R1);
+    if(HMiCT_EmgyBroadcastID_U8 == 6)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 6;
+        SetBtnDown(ID_PIBIB_BUTTON_L2R1);
+    }
+//    HMiCT_EmgyBroadcastID_U8 = 6;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L2R1);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -457,15 +533,26 @@ void CInstancyBroadcastPage::On6BtnClk()
 //    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 }
 void CInstancyBroadcastPage::On7BtnClk()
 {
-    //BitSet(HMI_send_data26,14,0);
-    HMiCT_EmgyBroadcastID_U8 = 7;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L2R2);
+    if(HMiCT_EmgyBroadcastID_U8 == 7)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 7;
+        SetBtnDown(ID_PIBIB_BUTTON_L2R2);
+    }
+//    HMiCT_EmgyBroadcastID_U8 = 7;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L2R2);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -474,15 +561,27 @@ void CInstancyBroadcastPage::On7BtnClk()
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//   // ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 }
 void CInstancyBroadcastPage::On8BtnClk()
 {
-    //BitSet(HMI_send_data26,14,0);
-    HMiCT_EmgyBroadcastID_U8 = 8;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L2R3);
+//    BitSet(HMI_send_data26,14,0);
+    if(HMiCT_EmgyBroadcastID_U8 == 8)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 8;
+        SetBtnDown(ID_PIBIB_BUTTON_L2R3);
+    }
+//    HMiCT_EmgyBroadcastID_U8 = 8;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L2R3);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -491,15 +590,26 @@ void CInstancyBroadcastPage::On8BtnClk()
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
 //    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 }
 void CInstancyBroadcastPage::On9BtnClk()
 {
-    //BitSet(HMI_send_data26,14,0);
-    HMiCT_EmgyBroadcastID_U8 = 9;
-    m_bStart_FireAlarm = true;
-    set_timer_FireAlarm= 3;
-    SetBtnDown(ID_PIBIB_BUTTON_L2R4);
+    if(HMiCT_EmgyBroadcastID_U8 == 9)
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = false;
+        HMiCT_EmgyBroadcastID_U8 = 0;
+        SetBtnDown(NULL);
+    }else
+    {
+        HMiCT_EmgyBroadcastCommd_B1 = true;
+        HMiCT_EmgyBroadcastID_U8 = 9;
+        SetBtnDown(ID_PIBIB_BUTTON_L2R4);
+    }
+//    HMiCT_EmgyBroadcastID_U8 = 9;
+//    m_bStart_FireAlarm = true;
+//    set_timer_FireAlarm= 10;
+//    SetBtnDown(ID_PIBIB_BUTTON_L2R4);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R2))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R3))->ChangeButtonState(LBUTTON_UP);
@@ -507,7 +617,8 @@ void CInstancyBroadcastPage::On9BtnClk()
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L1R5))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R1))->ChangeButtonState(LBUTTON_UP);
 //    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R2))->ChangeButtonState(LBUTTON_UP);
-//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    ((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R3))->ChangeButtonState(LBUTTON_UP);
+//    //((CButton *)GetDlgItem(ID_PIBIB_BUTTON_L2R4))->ChangeButtonState(LBUTTON_UP);
 
 }
 

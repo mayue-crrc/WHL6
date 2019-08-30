@@ -1841,6 +1841,7 @@ BYTE HMCT_HeaterquiescentTime_U8=30;
    bool HMiCT_SAVELastStation_B1 = false;
    bool HMiCT_HoldBrkRls_B1 = false;
    bool HMiCT_FaultDetection_B1 = false;
+   bool HMiCT_MRPLow_B1 = false;
    bool HMiCT_HVAC1FireMode_B1 = false;
    bool HMiCT_HVAC1PreOff_B1 = false;
    bool HMiCT_HVAC1EmgcyVenti_B1 = false;

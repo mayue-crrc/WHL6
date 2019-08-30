@@ -247,8 +247,9 @@ ROMDATA  g_PicRom_CommStatus[] =
 {QObject::trUtf8("REC"),         D_FONT_BOLD(6),      QRect(104+20, 307,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_FAS1          },
 {QObject::trUtf8("HVAC"),        D_FONT_BOLD(6),      QRect(104+20, 337,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR1_HVAC         },
 {QObject::trUtf8("PIS"),         D_FONT_BOLD(6),      QRect(104+20, 367,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR1_PIS          },
-{QObject::trUtf8("EDCU1"),         D_FONT_BOLD(6),    QRect(104+20, 427,  50,  20),              Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR1_GW1          },
-{QObject::trUtf8("EDCU2"),         D_FONT_BOLD(6),    QRect(104+20, 397,  50,  20),              Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR1_GW2          },
+//changed by customer  ,diff from stream file
+{QObject::trUtf8("EDCU2"),         D_FONT_BOLD(6),    QRect(104+20, 427,  50,  20),              Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR1_GW1          },
+{QObject::trUtf8("EDCU1"),         D_FONT_BOLD(6),    QRect(104+20, 397,  50,  20),              Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR1_GW2          },
 
 
 
@@ -289,17 +290,17 @@ ROMDATA  g_PicRom_CommStatus[] =
     {QObject::trUtf8("ATC"),         D_FONT_BOLD(6),      QRect(40, 307,  50,  20),           Qt::black,                 Qt::green,                CONTROL_LABEL,            ID_PIBCS_LABEL_HMI1_UPD         },
 
 
-    {QObject::trUtf8("EDCU3"),         D_FONT_BOLD(6),      QRect(224, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR3_GW1          },
-    {QObject::trUtf8("EDCU4"),         D_FONT_BOLD(6),      QRect(224, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR3_GW2          },
-    {QObject::trUtf8("EDCU5"),         D_FONT_BOLD(6),      QRect(324, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR4_GW1          },
-    {QObject::trUtf8("EDCU6"),         D_FONT_BOLD(6),      QRect(324, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR4_GW2          },
+    {QObject::trUtf8("EDCU4"),         D_FONT_BOLD(6),      QRect(224, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR3_GW1          },
+    {QObject::trUtf8("EDCU3"),         D_FONT_BOLD(6),      QRect(224, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR3_GW2          },
+    {QObject::trUtf8("EDCU6"),         D_FONT_BOLD(6),      QRect(324, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR4_GW1          },
+    {QObject::trUtf8("EDCU5"),         D_FONT_BOLD(6),      QRect(324, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR4_GW2          },
 
-    {QObject::trUtf8("EDCU7"),         D_FONT_BOLD(6),      QRect(424, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR5_GW1          },
-    {QObject::trUtf8("EDCU8"),         D_FONT_BOLD(6),      QRect(424, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR5_GW2          },
-    {QObject::trUtf8("EDCU9"),         D_FONT_BOLD(6),      QRect(524, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR7_GW1          },
-    {QObject::trUtf8("EDCU10"),         D_FONT_BOLD(6),      QRect(524, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR7_GW2          },
-    {QObject::trUtf8("EDCU11"),         D_FONT_BOLD(6),      QRect(624, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR8_GW1          },
-    {QObject::trUtf8("EDCU12"),         D_FONT_BOLD(6),      QRect(624, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR8_GW2          },
+    {QObject::trUtf8("EDCU7"),         D_FONT_BOLD(6),      QRect(424, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR5_GW2          },
+    {QObject::trUtf8("EDCU8"),         D_FONT_BOLD(6),      QRect(424, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR5_GW1          },
+    {QObject::trUtf8("EDCU9"),         D_FONT_BOLD(6),      QRect(524, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR7_GW2          },
+    {QObject::trUtf8("EDCU10"),         D_FONT_BOLD(6),      QRect(524, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR7_GW1          },
+    {QObject::trUtf8("EDCU11"),         D_FONT_BOLD(6),      QRect(624, 427,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR8_GW2          },
+    {QObject::trUtf8("EDCU12"),         D_FONT_BOLD(6),      QRect(624, 397,  50,  20),           Qt::black,                Qt::green,                CONTROL_LABEL,           ID_PIBCS_LABEL_CAR8_GW1          },
 
     //  BCU net
 //    {QObject::trUtf8(""),            D_FONT_BOLD(6),      QRect(126, 359, 231,   7),           Qt::black,                Qt::darkGreen,            CONTROL_LABEL,           ID_PIBCS_LABEL_BCU1INTO3         },

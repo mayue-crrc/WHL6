@@ -2304,6 +2304,7 @@ extern bool HMiCT_SAVEFirstStation_B1;
 extern bool HMiCT_SAVELastStation_B1;
 extern bool HMiCT_HoldBrkRls_B1;
 extern bool HMiCT_FaultDetection_B1;
+extern bool  HMiCT_MRPLow_B1;
 extern bool HMiCT_HVAC1FireMode_B1;
 extern bool HMiCT_HVAC1PreOff_B1;
 extern bool HMiCT_HVAC1EmgcyVenti_B1;
